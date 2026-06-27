@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Formations — contenu payant, non indexé
+Disallow: /formations/
+
+# Assets de build Astro (JS/CSS compilés, non pertinents)
+Disallow: /_astro/
+
+Sitemap: https://www.claiire.fr/sitemap-index.xml

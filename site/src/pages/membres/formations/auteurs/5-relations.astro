@@ -1,0 +1,82 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  { title: 'Cadre', body: "Ici, tu ne cherches pas à devenir irréprochable. Tu cherches à construire une autre texture de relation." },
+  { title: 'Temps', body: "Prévois 20 à 30 minutes si tu lis tout le module et quelques minutes pour préparer une vraie demande en CNV." },
+  { title: 'Repère', body: "Le coeur du travail tient souvent dans les détails du quotidien, pas seulement dans les grandes discussions." },
+];
+
+const checklistItems = [
+  "Je comprends mieux la roue de l'égalité.",
+  "Je distingue un peu mieux demande et exigence.",
+  "J'ai préparé ou essayé une formulation en CNV.",
+  "Je vois mieux les petits gestes qui nourrissent une relation.",
+  "Je comprends un peu mieux ce que veut dire vulnérabilité sans contrôle.",
+];
+
+const protocolItems = [
+  { title: 'Choisis une dimension relationnelle', body: "Prends une dimension de la roue de l'égalité que tu veux vraiment travailler : respect, équité, responsabilité, soutien, etc." },
+  { title: 'Prépare une demande réelle', body: "Observation, sentiment, besoin, demande : écris-la d'abord pour sortir des automatismes d'attaque." },
+  { title: 'Laisse la place au non', body: "Le vrai test d'une demande, c'est la place que tu laisses à la réponse de l'autre." },
+  { title: 'Observe la connexion concrète', body: "Regarde ce que change un petit moment de réparation, de curiosité ou de présence sincère." },
+];
+
+const resourceItems = [
+  { label: "Roue de l'égalité", detail: 'Duluth, Rosenberg, Gottman, Sue Johnson.' },
+  { label: 'CNV', detail: 'Une structure pour sortir de l’attaque et de l’exigence.' },
+  { label: 'Relations', detail: 'Compléter avec le dossier relations.', href: '/relations/' },
+  { label: 'Module suivant', detail: 'Passer au maintien du changement.', href: '/formations/auteurs/6-prevention/' },
+];
+
+const warningItems = [
+  "Ne transforme pas la CNV en technique élégante de contrôle.",
+  "Ne lis pas un désaccord comme une défaite relationnelle automatique.",
+  "Ne confonds pas réparation et effacement immédiat de l'impact passé.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/auteurs/5-relations/"
+  title="Module A5 — Des relations qui te ressemblent"
+  description="Version complète du module relations auteurs : roue de l'égalité, CNV, Gottman, vulnérabilité et micro-gestes de connexion."
+  heroTitle="Module A5 — Des relations qui te ressemblent"
+  heroTagline="Ce module t'aide à regarder à quoi ressemble une relation sans contrôle : plus d'égalité, plus de responsabilité partagée, moins d'exigence, plus de présence réelle."
+  moduleLabel="Version complète"
+  progressLabel="Parcours auteurs · Module 5 sur 6"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/auteurs/5-relations/', variant: 'secondary' }}
+  nextAction={{ text: 'Continuer vers le module 6', link: '/formations/auteurs/6-prevention/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Ce module regarde vers l'avant. À quoi ressemble une relation où tu n'as pas besoin de dominer, d'éteindre l'autre ou de reprendre le contrôle à chaque désaccord ? À quoi ressemble une relation où la sécurité ne passe plus par la contrainte ?
+  </p>
+  <h3>La roue de l'égalité</h3>
+  <p>
+    Négociation, soutien, honnêteté, responsabilité, respect, partage du pouvoir, indépendance économique, co-gestion de la vie commune : cette roue donne une carte concrète de ce qui remplace le pouvoir et le contrôle.
+  </p>
+  <h3>Demande ou exigence</h3>
+  <p>
+    Avec Rosenberg, la CNV sert à exprimer quelque chose de difficile sans faire de l'autre l'ennemi. Le point le plus décisif reste souvent celui-ci : est-ce que tu laisses réellement de la place au non, ou est-ce que la punition revient si l'autre n'obéit pas ?
+  </p>
+  <h3>Les petits moments comptent</h3>
+  <p>
+    Gottman montre que la texture relationnelle se construit surtout dans les micro-interactions du quotidien : réparation, curiosité, réponse à une tentative de connexion, respect maintenu dans la tension.
+  </p>
+  <h3>La vulnérabilité comme autre force</h3>
+  <p>
+    Sue Johnson aide à voir que beaucoup de conflits cachent surtout une peur du lien et un besoin de connexion mal formulé. Quand cette couche peut se dire un peu plus directement, une autre qualité de relation devient possible.
+  </p>
+  <h3>L’exercice : une CNV sur un désaccord simple</h3>
+  <p>
+    Prépare à l'écrit un désaccord de niveau 1. Décris un fait, nomme ton émotion, ton besoin, puis formule une demande concrète. Ensuite, regarde surtout comment tu tiens la possibilité du non.
+  </p>
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    Si tu vois déjà un peu mieux comment remplacer l'exigence par une demande, et le contrôle par des gestes de relation plus égalitaires, alors quelque chose de très concret a commencé à bouger.
+  </p>
+</FormationModulePrivateLayout>

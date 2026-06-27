@@ -1,0 +1,82 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  { title: 'Cadre', body: "Ici, tu ne choisis pas entre responsabilité et humanité. Tu apprends à tenir les deux." },
+  { title: 'Temps', body: "Prévois 20 à 30 minutes si tu lis tout le module et quelques minutes pour l'exercice d'empathie progressive." },
+  { title: 'Repère', body: "Si tu te défends intérieurement très vite, ralentis. C'est souvent là que le vrai travail commence." },
+];
+
+const checklistItems = [
+  "Je comprends mieux ce qu'est l'empathie sélective.",
+  "Je vois un peu mieux l'impact concret sur l'autre.",
+  "J'ai essayé l'exercice d'empathie progressive.",
+  "Je comprends que mon histoire mérite aussi d'être travaillée sans devenir une excuse.",
+  "Je vois la réparation comme une orientation dans le temps.",
+];
+
+const protocolItems = [
+  { title: 'Choisis un épisode réel', body: "Prends un moment qui a vraiment blessé l'autre, sans partir sur un cas trop abstrait ou trop défensif." },
+  { title: "Entre dans le point de vue de l'autre", body: "Regarde ce qu'il ou elle a pu ressentir dans le corps, dans la relation, dans la sécurité quotidienne." },
+  { title: 'Observe ta propre histoire sans l’utiliser comme alibi', body: "Reconnais ce que tu as traversé, mais garde la responsabilité sur ce que tu as fait." },
+  { title: 'Relie ça à la réparation', body: "Demande-toi concrètement ce qui, dans la durée, pourrait moins nier l'impact et mieux orienter tes actes." },
+];
+
+const resourceItems = [
+  { label: 'Empathie', detail: 'Baron-Cohen, van der Kolk, Voith, Zehr.' },
+  { label: 'Exercice progressif', detail: "Un cadre pour rester un peu plus longtemps dans l'expérience de l'autre." },
+  { label: 'Ressources auteurs', detail: 'Un relais si le travail réactive trop de défensive ou de honte.', href: '/violence/auteurs/' },
+  { label: 'Module suivant', detail: "Passer aux relations égalitaires.", href: '/formations/auteurs/5-relations/' },
+];
+
+const warningItems = [
+  "Ne transforme pas ta propre blessure en justification automatique.",
+  "Ne quitte pas trop vite le point de vue de l'autre au premier inconfort.",
+  "Si la honte devient écrasante, reviens aux faits et à une étape simple.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/auteurs/4-empathie/"
+  title="Module A4 — Voir l'autre"
+  description="Version complète du module empathie : impact sur l'autre, empathie sélective, vécu traumatique des auteurs et orientation réparatrice."
+  heroTitle="Module A4 — Voir l'autre"
+  heroTagline="Ce module t'aide à rouvrir l'accès à l'expérience de l'autre là où les mécanismes de protection ont pu la couper, sans nier pour autant ta propre histoire."
+  moduleLabel="Version complète"
+  progressLabel="Parcours auteurs · Module 4 sur 6"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/auteurs/4-empathie/', variant: 'secondary' }}
+  nextAction={{ text: 'Continuer vers le module 5', link: '/formations/auteurs/5-relations/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Ce module tient un équilibre difficile : regarder l'impact de tes actes sur l'autre, et ne pas effacer non plus ce que toi tu as peut-être traversé. Les deux comptent, mais ils ne jouent pas le même rôle.
+  </p>
+  <h3>L'empathie n'est pas l'accord</h3>
+  <p>
+    Baron-Cohen aide à la penser comme une capacité à comprendre et répondre plus justement à l'état de l'autre. Cette capacité n'est pas fixe. Elle peut être très présente dans certains contextes et coupée dans d'autres, surtout quand la honte ou la défensive prennent la main.
+  </p>
+  <h3>L'impact sur l'autre</h3>
+  <p>
+    La peur, l'hypervigilance, la perte de confiance, les réactions corporelles qui persistent : l'impact ne s'arrête pas à l'instant de l'acte. Van der Kolk aide à comprendre que le corps garde les traces du danger relationnel.
+  </p>
+  <h3>Ta propre histoire compte aussi</h3>
+  <p>
+    Voith montre qu'une proportion importante d'auteurs ont eux-mêmes traversé des choses difficiles. Les regarder peut aider à arrêter la transmission. Mais ces blessures ne retirent pas la responsabilité sur les actes.
+  </p>
+  <h3>La réparation comme orientation</h3>
+  <p>
+    Avec Zehr, la responsabilité devient une question durable : qui a été blessé, quels sont les besoins, qu'est-ce que je fais maintenant, et qu'est-ce que je continue à faire dans le temps ?
+  </p>
+  <h3>L’exercice : empathie progressive</h3>
+  <p>
+    Choisis une situation, décris les faits, entre dans ce que l'autre a probablement vécu dans son corps et dans sa relation à toi, puis demande-toi ce que tu aurais voulu faire autrement si tu avais eu accès à ça à ce moment-là.
+  </p>
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    Si tu tiens déjà un peu mieux ensemble l'impact sur l'autre, ta propre histoire et la possibilité d'une réparation orientée dans le temps, alors tu n'es déjà plus exactement au même endroit qu'avant.
+  </p>
+</FormationModulePrivateLayout>

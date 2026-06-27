@@ -1,0 +1,12 @@
+---
+import { getEntry } from 'astro:content';
+import DocEntryPage from '../components/DocEntryPage.astro';
+
+const entry = await getEntry('docs', '404');
+
+if (!entry) {
+  throw new Error('La page 404 `src/content/docs/404.md` est introuvable.');
+}
+---
+
+<DocEntryPage currentPath="/404" entry={entry} />

@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import DocEntryPage from '../components/DocEntryPage.astro';
+import { docPathFromEntryId, slugParamFromEntryId } from '../lib/navigation';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('docs', ({ data, id }) => {
+    const path = docPathFromEntryId(id);
+    return !data.draft && path !== '/' && path !== '/404';
+  });
+
+  return entries.map((entry) => ({
+    params: {
+      slug: slugParamFromEntryId(entry.id),
+    },
+    props: {
+      currentPath: docPathFromEntryId(entry.id),
+      entry,
+    },
+  }));
+}
+
+const { currentPath, entry } = Astro.props;
+---
+
+<DocEntryPage currentPath={currentPath} entry={entry} />

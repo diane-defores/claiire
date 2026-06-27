@@ -1,0 +1,80 @@
+---
+import ParcoursPage from '../../components/ParcoursPage.astro';
+---
+
+<ParcoursPage
+  currentPath="/parcours/sante"
+  title="Parcours : Renforcer Ta Santé"
+  description="Optimise ton corps et ton énergie vitale"
+  hero={{
+    title: '💪 Renforcer ta santé',
+    tagline: 'Optimise ton corps et ton énergie vitale',
+    actions: [{ text: 'Commencer le premier module', link: '/harmonie/', variant: 'primary' }],
+  }}
+  parcourId="sante"
+  modules={[
+    { title: "Vue d'ensemble santé", link: '/harmonie/' },
+    { title: 'Nutrition essentielle', link: '/systeme-digestif/nutrition/' },
+    { title: 'Activité physique', link: '/activite/physique/' },
+    { title: 'Système immunitaire', link: '/systeme-immunitaire/' },
+    { title: 'Métabolisme', link: '/harmonie/metabolisme' },
+    { title: 'Inflammation', link: '/systeme-immunitaire/inflammation' },
+  ]}
+  intro="Ce parcours te donne une vision globale et cohérente de ta santé — pas un régime, pas un programme miracle. Une compréhension profonde de ton corps et des leviers concrets pour te sentir vraiment bien dans ta peau."
+  steps={[
+    {
+      title: 'Étape 1 — Comprendre ton corps comme un système',
+      body: "Ton corps ne fonctionne pas en silos. Système nerveux, hormonal, immunitaire, digestif — tout est interconnecté. Cette étape pose la vision d'ensemble pour que tu comprennes pourquoi un problème de digestion peut affecter ton humeur, et vice versa.",
+      links: [
+        { href: '/harmonie/', text: "L'harmonie des systèmes biologiques" },
+        { href: '/harmonie/homeostasie', text: "L'homéostasie : l'équilibre naturel du corps" },
+        { href: '/cellules/', text: 'La cellule, unité de base de ta santé' },
+      ],
+    },
+    {
+      title: 'Étape 2 — Bouger (activité physique et intellectuelle)',
+      body: "L'exercice physique n'est pas juste une question d'esthétique — c'est de la médecine préventive. Et l'activité intellectuelle entretient ton cerveau au même titre que le sport entretient tes muscles.",
+      links: [
+        { href: '/activite/physique/bienfaits', text: "Les bienfaits de l'activité physique" },
+        { href: '/activite/physique/', text: "L'activité physique : tout savoir" },
+        { href: '/activite/intellectuelle/', text: "L'activité intellectuelle" },
+      ],
+    },
+    {
+      title: 'Étape 3 — Nourrir son corps (nutrition, cellules, microbiote)',
+      body: "Tu es littéralement ce que tu manges. Cette étape explore les bases d'une nutrition qui nourrit vraiment tes cellules, soutient ton cerveau et renforce tes défenses naturelles. Pas de dogme alimentaire — de la science appliquée.",
+      links: [
+        { href: '/systeme-digestif/nutrition/', text: 'La nutrition essentielle' },
+        { href: '/systeme-digestif/', text: 'Le système digestif' },
+      ],
+    },
+    {
+      title: 'Étape 4 — Récupérer (sommeil, stress, régénération)',
+      body: "La récupération est souvent le maillon faible des gens qui veulent être en bonne santé. Pas de performance durable sans repos de qualité. Cette étape connecte sommeil, gestion du stress et régénération cellulaire.",
+      links: [
+        { href: '/parcours/sommeil', text: 'Améliorer son sommeil' },
+        { href: '/parcours/stress', text: 'Gérer le stress' },
+        { href: '/systeme-nerveux/', text: 'Le système nerveux et la récupération' },
+      ],
+    },
+    {
+      title: 'Étape 5 — Santé hormonale et immunité',
+      body: "Les hormones orchestrent presque tout : énergie, humeur, métabolisme, reproduction, inflammation. Et le système immunitaire est ta première ligne de défense. Comprendre ces deux systèmes, c'est maîtriser les leviers les plus puissants de ta santé.",
+      links: [
+        { href: '/systeme-hormonal/', text: 'Le système hormonal' },
+        { href: '/systeme-immunitaire/', text: 'Le système immunitaire' },
+        { href: '/systeme-nerveux/nutrition-nerveuse', text: 'La nutrition nerveuse' },
+      ],
+    },
+  ]}
+  resources={[
+    { href: '/systeme-nerveux/', text: 'Comprendre ton système nerveux' },
+    { href: '/systeme-digestif/', text: 'Prendre soin de ton système digestif' },
+    { href: '/bonheur/les-hormones-du-bonheur', text: 'Les hormones du bonheur et de la santé' },
+    { href: '/activite/physique/bienfaits', text: "Les bienfaits de l'activité physique" },
+    { href: '/epigenetique', text: "L'épigénétique" },
+    { href: '/medecine/', text: 'La médecine préventive' },
+    { href: '/systeme-cardio/', text: 'Le système cardiovasculaire' },
+  ]}
+  closing="Prendre soin de ton corps, c'est le meilleur investissement de ta vie."
+/>

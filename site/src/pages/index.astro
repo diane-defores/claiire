@@ -1,0 +1,79 @@
+---
+import ParcoursGrid from '../components/ParcoursGrid.astro';
+import StaticPageLayout from '../layouts/StaticPageLayout.astro';
+---
+
+<StaticPageLayout
+  currentPath="/"
+  title="Claiire | Coaching bien-être — bonheur, objectifs, crises"
+  description="Tu veux être heureux, atteindre tes objectifs ou traverser une crise ? Claiire t'accompagne avec des parcours guidés sur la psychologie, les émotions et le corps."
+  hero={{
+    title: 'Comprendre ce que tu vis. Avancer pas à pas.',
+    tagline:
+      "Des parcours guidés sur la psychologie, les émotions, les relations et le corps, dans un site pensé pour être clair, rapide et réellement utile.",
+    actions: [
+      { text: 'Explorer les parcours', link: '/parcours/bonheur', variant: 'primary' },
+      { text: 'Découvrir les formations', link: '/formations/', variant: 'secondary' },
+    ],
+  }}
+  sectionLabel="Accueil"
+>
+  <div class="landing-intro">
+    <p>
+      Peu importe où tu en es — en pleine crise, en quête de sens, ou simplement en train de
+      chercher mieux — Claiire t'aide à comprendre ce qui se passe en toi pour changer ce que tu
+      vis.
+    </p>
+
+    <p>
+      <strong>
+        Tu mérites d'être heureux. Pas "moins malheureux" — vraiment heureux. Ici, tu trouves les
+        clés pour comprendre ce qui te bloque et avancer pour de bon.
+      </strong>
+    </p>
+  </div>
+
+  <ParcoursGrid />
+
+  <h2>Ce qu'on fait différemment</h2>
+
+  <p>
+    <strong>On part de toi, pas d'un symptôme.</strong> Pas de liste de maladies à éviter. On part
+    de là où tu en es — un objectif à atteindre, une crise à traverser, un bonheur à construire —
+    et on t'aide à avancer pas à pas.
+  </p>
+
+  <p>
+    <strong>On t'explique pourquoi, pas juste quoi.</strong> Comprendre pourquoi ton système
+    nerveux bloque sous le stress, pourquoi certaines émotions reviennent en boucle, pourquoi tes
+    habitudes résistent : quand tu saisis le mécanisme, tu reprends la main.
+  </p>
+
+  <p>
+    <strong>On ne te laisse pas seul.</strong> Des parcours guidés, étape par étape. Tu coches, tu
+    progresses, tu vois le chemin parcouru. Un pas à la fois suffit — c'est comme ça qu'on change
+    vraiment.
+  </p>
+
+  <p>
+    <strong>On s'appuie sur la science, pas sur les modes.</strong> Psychologie, neurosciences,
+    biologie : chaque contenu est ancré dans la recherche. Pas de gourous, pas de promesses
+    magiques — des outils qui marchent.
+  </p>
+
+  <a href="#app" class="app-download-btn" id="app">Télécharge l'app compagnon</a>
+
+  <aside class="callout callout--tip">
+    <p class="callout__title">Bientôt disponible</p>
+    <p>L'app qui te suit au quotidien :</p>
+    <ul>
+      <li>Tes parcours accessibles hors ligne</li>
+      <li>Des rappels doux pour garder le cap</li>
+      <li>Ta progression visible en un coup d'oeil</li>
+      <li>Une communauté qui avance avec toi</li>
+    </ul>
+    <p>
+      <strong>Inscris-toi</strong> pour être prévenu du lancement.
+    </p>
+  </aside>
+</StaticPageLayout>

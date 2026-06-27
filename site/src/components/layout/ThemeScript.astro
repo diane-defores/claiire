@@ -1,0 +1,29 @@
+<script is:inline>
+  (() => {
+    const storageKey = 'claiire-theme';
+    const root = document.documentElement;
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const getStoredTheme = () => {
+      try {
+        return localStorage.getItem(storageKey);
+      } catch {
+        return null;
+      }
+    };
+
+    const resolveTheme = () => {
+      const storedTheme = getStoredTheme();
+
+      if (storedTheme === 'light' || storedTheme === 'dark') {
+        return storedTheme;
+      }
+
+      return media.matches ? 'dark' : 'light';
+    };
+
+    const theme = resolveTheme();
+    root.dataset.theme = theme;
+    root.style.colorScheme = theme;
+  })();
+</script>

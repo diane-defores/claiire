@@ -1,0 +1,78 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  { title: 'Cadre', body: "Ici, tu ne cherches pas à devenir 'indépendant(e)' de tout. Tu cherches à redevenir le sujet de ta propre vie." },
+  { title: 'Temps', body: "Prévois 20 à 30 minutes si tu lis tout le module et quelques minutes pour tes micro-décisions." },
+  { title: 'Repère', body: "Commencer petit n'est pas petit. C'est souvent la seule façon durable de refaire exister un pouvoir d'action." },
+];
+
+const checklistItems = [
+  "Je comprends mieux ce qu'est l'impuissance apprise.",
+  "Je vois la différence entre autonomie et solitude.",
+  "J'ai commencé des micro-décisions autonomes.",
+  "Je reconnais un peu mieux ma propre voix.",
+  "Je peux nommer un domaine concret où reprendre de l'autonomie.",
+];
+
+const protocolItems = [
+  { title: 'Choisis un domaine', body: "Décisionnel, émotionnel, pratique, social, financier : prends un seul terrain au départ." },
+  { title: 'Passe en micro-décisions', body: "Décide de choses petites mais réelles, et tiens-les suffisamment pour que le cerveau enregistre une expérience de maîtrise." },
+  { title: 'Observe avant et après', body: "Note l'appréhension, le doute, le soulagement ou l'inconfort après chaque décision autonome." },
+  { title: 'Renforce la suite', body: "Utilise ces petites victoires pour construire un élan réaliste, pas pour te juger au premier raté." },
+];
+
+const resourceItems = [
+  { label: 'Auto-efficacité', detail: 'Bandura, Fogg, Seligman, Deci et Ryan.' },
+  { label: 'Dialogue intérieur', detail: 'Repérer la voix à toi et la voix installée par le contrôle.' },
+  { label: 'Confiance', detail: 'Compléter avec la reconstruction de la confiance.', href: '/confiance/reconstruire/' },
+  { label: 'Module suivant', detail: "Passer à l'ancrage durable.", href: '/formations/victimes/6-ancrage/' },
+];
+
+const warningItems = [
+  "Ne prends pas une hésitation comme la preuve que tu n'es pas capable.",
+  "Ne transforme pas l'autonomie en injonction à tout faire seul(e).",
+  "Ne compare pas tes micro-victoires à la vie entière de quelqu'un d'autre.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/victimes/5-autonomie/"
+  title="Module V5 — Ton autonomie"
+  description="Version complète du module autonomie : impuissance apprise, auto-efficacité, micro-décisions, dialogue intérieur et reprise concrète de pouvoir d'agir."
+  heroTitle="Module V5 — Ton autonomie"
+  heroTagline="Ce module t'aide à retrouver une capacité simple mais centrale : décider, agir, te croire un peu plus capable, et sentir à nouveau que tes choix peuvent avoir un effet."
+  moduleLabel="Version complète"
+  progressLabel="Parcours victimes · Module 5 sur 6"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/victimes/5-autonomie/', variant: 'secondary' }}
+  nextAction={{ text: 'Continuer vers le module 6', link: '/formations/victimes/6-ancrage/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    L'autonomie revient rarement d'un seul coup. Elle se reconstruit à travers des décisions simples, des actes tenus, et la répétition de petites expériences où tu constates que ton geste a un effet réel.
+  </p>
+  <h3>De l'impuissance apprise à l'auto-efficacité</h3>
+  <p>
+    Seligman a montré qu'on peut finir par ne plus essayer quand trop de tentatives ont échoué ou été punies. Bandura a montré l'inverse utile : le sentiment de compétence revient par expériences de maîtrise. Les petites réussites changent réellement le terrain.
+  </p>
+  <h3>L'autonomie émotionnelle</h3>
+  <p>
+    Une part du travail consiste à ne plus attendre systématiquement que quelqu'un d'autre valide ton ressenti avant que tu le prennes au sérieux. Demande-toi plus souvent : comment est-ce que moi je me sens, avant de regarder comment l'autre réagit ?
+  </p>
+  <h3>Le dialogue intérieur</h3>
+  <p>
+    Certaines phrases dans ta tête ne sont peut-être pas vraiment à toi. Elles viennent parfois de ce qui a été répété, imposé ou insinué. Les reconnaître est un pas fort pour retrouver une voix plus juste.
+  </p>
+  <h3>L’exercice : cinq micro-décisions</h3>
+  <p>
+    Pendant quelques jours, prends une petite décision par jour et tiens-la. Puis note ce que tu as décidé, ce que tu as ressenti avant, et ce que tu as ressenti après. C'est simple, mais très puissant.
+  </p>
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    Si tu te surprends déjà à décider un peu plus, à douter un peu moins de ton ressenti, ou à reconnaître qu'une petite action compte, alors l'autonomie a déjà recommencé à prendre place.
+  </p>
+</FormationModulePrivateLayout>

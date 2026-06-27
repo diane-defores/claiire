@@ -1,0 +1,179 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  {
+    title: 'Cadre',
+    body: "Ici, tu ne cherches pas à tout résoudre. Tu cherches à ne pas te retrouver sans repère si la situation monte d'un coup.",
+  },
+  {
+    title: 'Temps',
+    body: "Prévois 20 à 30 minutes si tu lis tout le module et quelques minutes de plus pour noter ton plan minimal.",
+  },
+  {
+    title: 'Repère',
+    body: "Si certaines questions te font peur, c'est normal. Le but est de préparer juste assez pour gagner de la marge, pas de te brusquer.",
+  },
+];
+
+const checklistItems = [
+  "Je connais au moins un point de contact immédiat.",
+  "Je sais mieux où sont mes documents importants.",
+  "J'ai repéré un endroit ou une option de repli.",
+  "Je comprends mieux les signaux de risque élevé.",
+  "Je sais qu'il faut aussi penser à la sécurité numérique.",
+];
+
+const protocolItems = [
+  {
+    title: 'Évalue le risque sans minimiser',
+    body: "Regarde si la situation comporte des éléments de risque élevé : escalade, étranglement, armes, menaces de mort, surveillance extrême, tentative de départ déjà empêchée.",
+  },
+  {
+    title: 'Pose ton plan minimal',
+    body: "Note qui appeler, où aller et ce qu'il faut pouvoir attraper vite sans avoir à réfléchir pendant la crise.",
+  },
+  {
+    title: 'Sécurise les documents et le numérique',
+    body: "Repère les papiers, les accès, les comptes, et ce qui pourrait être surveillé ou confisqué.",
+  },
+  {
+    title: 'Prépare la suite',
+    body: "Une fois un peu plus de sécurité posée, tu peux continuer vers le travail sur le trauma avec plus de base.",
+  },
+];
+
+const resourceItems = [
+  {
+    label: 'Plan de sécurité minimal',
+    detail: 'Un socle simple : contact, documents, repli.',
+  },
+  {
+    label: 'Repères de risque',
+    detail: 'Lecture inspirée du Danger Assessment de Campbell.',
+  },
+  {
+    label: 'Ressources victimes',
+    detail: 'Urgence, écoute, orientation.',
+    href: '/violence/victimes/',
+  },
+  {
+    label: 'Module suivant',
+    detail: 'Passer de la sécurité à la compréhension du trauma.',
+    href: '/formations/victimes/2-guerison/',
+  },
+];
+
+const warningItems = [
+  "Ne laisse pas ce module ouvert sur un appareil potentiellement surveillé si ce n'est pas sûr.",
+  "Ne minimise pas des signaux comme l'étranglement, les menaces de mort ou l'accès à des armes.",
+  "Si tu es en danger immédiat, bascule vers les ressources d'urgence avant toute autre chose.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/victimes/1-securite/"
+  title="Module V1 — Ton plan de sécurité"
+  description="Version complète du premier module victimes : évaluation du risque, plan de sécurité, kit d'urgence, sécurité numérique et réseau de soutien."
+  heroTitle="Module V1 — Ton plan de sécurité"
+  heroTagline="Ce module t'aide à préparer l'essentiel avant une crise : repères, relais, documents, sécurité numérique et marge de manoeuvre."
+  moduleLabel="Version complète"
+  progressLabel="Parcours victimes · Module 1 sur 6"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/victimes/1-securite/', variant: 'secondary' }}
+  nextAction={{ text: 'Continuer vers le module 2', link: '/formations/victimes/2-guerison/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Merci d'être là. Ce module est peut-être le plus concret du parcours victimes. Il ne te demande pas de fouiller
+    tout de suite ton histoire. Il te demande de poser quelque chose de plus immédiat : un peu plus de sécurité.
+  </p>
+
+  <p>
+    Pas forcément une décision définitive. Pas forcément un grand départ aujourd'hui. Juste assez de préparation
+    pour ne pas te retrouver sans repère si les choses se tendent brutalement.
+  </p>
+
+  <h3>Évaluer la situation avec plus de lucidité</h3>
+  <p>
+    Jacquelyn Campbell a développé un outil clinique pour aider à lire le niveau de danger dans les relations
+    violentes. Sans tout reprendre ici de manière technique, certains indicateurs demandent une vigilance
+    particulière : l'escalade récente, l'étranglement, les menaces de mort, l'accès à des armes, la surveillance
+    constante, les tentatives de départ déjà empêchées.
+  </p>
+  <p>
+    Les voir ne t'oblige pas à agir dans la minute. Mais les nommer change la qualité de ton évaluation.
+  </p>
+
+  <h3>Le plan de sécurité minimal</h3>
+  <p>
+    Commence par trois questions. Elles suffisent déjà à faire exister un plan réel.
+  </p>
+  <p>
+    <strong>Qui appeler ?</strong> Une personne, un numéro, un relais sûr. Si tu n'as personne, le 3919 peut être un
+    premier point d'appui.
+  </p>
+  <p>
+    <strong>Où sont tes documents ?</strong> Pièce d'identité, carte bancaire, livret de famille si besoin, médicaments,
+    quelques affaires, contacts importants.
+  </p>
+  <p>
+    <strong>Où te mettre si ça monte ?</strong> Une pièce, une sortie, un voisin, un commerce, un endroit repéré.
+  </p>
+
+  <h3>Le kit d’urgence</h3>
+  <p>
+    Si partir vite devient nécessaire, un petit sac ou une trousse préparée à l'avance peut faire une grande
+    différence. L'idée n'est pas de tout anticiper parfaitement. L'idée est de ne pas partir de zéro sous stress.
+  </p>
+  <p>
+    Mets-y ce qui compte le plus : papiers, argent si possible, médicaments, contacts, quelques affaires utiles,
+    et tout ce qui te ferait gagner du temps dans un moment de crise.
+  </p>
+
+  <h3>La sécurité numérique</h3>
+  <p>
+    Le contrôle passe souvent par le téléphone, les comptes, les applications de localisation ou les recherches
+    en ligne. Si c'est pertinent pour ta situation, pense à utiliser un appareil non surveillé pour les recherches
+    sensibles, à vérifier les applications installées, à créer une adresse mail de secours et à ne pas laisser de
+    traces trop évidentes.
+  </p>
+
+  <h3>Le réseau de soutien</h3>
+  <p>
+    Une ou deux personnes suffisent pour commencer. Elles n'ont pas besoin de tout savoir. Elles ont juste besoin
+    de pouvoir jouer un rôle concret si tu en as besoin : répondre, t'accueillir, garder une copie, servir de
+    relais.
+  </p>
+  <p>
+    Si tu n'as personne, commence par les ressources associatives. Ce n'est pas un aveu d'échec. C'est déjà une
+    manière de sortir de l'isolement.
+  </p>
+
+  <h3>L’exercice : ton plan minimal en 3 réponses</h3>
+  <p>
+    Écris quelque part de sûr :
+  </p>
+  <p>
+    <strong>1.</strong> la première personne ou le premier numéro à contacter
+  </p>
+  <p>
+    <strong>2.</strong> l'endroit exact où sont les documents essentiels
+  </p>
+  <p>
+    <strong>3.</strong> le lieu le plus sûr ou l'option de sortie la plus réaliste si la situation monte d'un coup
+  </p>
+  <p>
+    C'est peu, mais c'est déjà un vrai plan.
+  </p>
+
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    La sécurité n'est pas une décision binaire. C'est une accumulation de gestes préparés. Si aujourd'hui tu sais
+    un peu mieux qui appeler, quoi protéger, où aller, ou comment réduire la part d'improvisation dans une crise,
+    alors ce module t'a déjà fait gagner quelque chose de réel.
+  </p>
+</FormationModulePrivateLayout>

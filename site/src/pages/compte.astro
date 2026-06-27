@@ -1,0 +1,67 @@
+---
+import { UserButton } from '@clerk/astro/components';
+import StaticPageLayout from '../layouts/StaticPageLayout.astro';
+
+const isClerkEnabled = Boolean(import.meta.env.PUBLIC_CLERK_PUBLISHABLE_KEY);
+const authState = Astro.locals.auth?.();
+const memberSession = Astro.locals.memberSession;
+const memberAccess = Astro.locals.memberAccess;
+
+if (isClerkEnabled && !authState?.userId) {
+  return Astro.redirect('/connexion/?redirect_url=/compte/');
+}
+---
+
+<StaticPageLayout
+  currentPath="/compte/"
+  title="Compte membre"
+  description="Le compte membre Claiire centralise l'etat premium, l'origine de l'abonnement et les liens utiles."
+  sectionLabel="Espace membre"
+  hero={{
+    title: 'Compte membre',
+    tagline:
+      "Cette page centralise ton acces premium, sa source et la suite du parcours quand le billing sera branche.",
+    actions: [{ text: 'Revenir aux formations', link: '/formations/', variant: 'primary' }],
+  }}
+>
+  <h2>Objectif de cette page</h2>
+  <ul>
+    <li>afficher le statut premium</li>
+    <li>indiquer la source d'acces : Apple, Google, Polar ou manuel</li>
+    <li>renvoyer vers la gestion d'abonnement</li>
+    <li>centraliser l'entree vers les contenus membres</li>
+  </ul>
+
+  {isClerkEnabled ? (
+    <>
+      <h2>Etat de la session</h2>
+      <ul>
+        <li>connecte(e) : {authState?.userId ? 'oui' : 'non'}</li>
+        <li>entitlement premium : {memberAccess?.isPremium ? 'oui' : 'non'}</li>
+        <li>source d'acces : {memberAccess?.source ?? 'none'}</li>
+        <li>stockage : {memberAccess?.storage ?? 'none'}</li>
+        <li>accorde le : {memberAccess?.grantedAt ?? 'inconnu'}</li>
+        <li>expire le : {memberAccess?.expiresAt ?? 'pas de date'}</li>
+        <li>user_id : <code>{memberSession?.userId ?? 'inconnu'}</code></li>
+      </ul>
+
+      {memberAccess?.note ? (
+        <>
+          <h2>Note d'acces</h2>
+          <p>{memberAccess.note}</p>
+        </>
+      ) : null}
+
+      <h2>Gestion du compte</h2>
+      <UserButton />
+    </>
+  ) : (
+    <>
+      <h2>Etat actuel</h2>
+      <p>
+        La structure de compte est prete a etre reliee a Clerk et aux futurs webhooks billing. La source de
+        verite d'acces membre passe maintenant par le private metadata Clerk.
+      </p>
+    </>
+  )}
+</StaticPageLayout>

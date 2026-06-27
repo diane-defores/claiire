@@ -1,0 +1,78 @@
+---
+import ParcoursPage from '../../components/ParcoursPage.astro';
+---
+
+<ParcoursPage
+  currentPath="/parcours/relations"
+  title="Parcours : Développer Tes Relations Sociales"
+  description="Construis des relations authentiques et enrichissantes"
+  hero={{
+    title: '👥 Développer tes relations sociales',
+    tagline: 'Construis des relations authentiques et enrichissantes',
+    actions: [{ text: 'Commencer le premier module', link: '/systeme-social/liens-sociaux', variant: 'primary' }],
+  }}
+  parcourId="relations"
+  modules={[
+    { title: 'Liens sociaux et santé', link: '/systeme-social/liens-sociaux' },
+    { title: 'Empathie', link: '/psy/emotions/qualite/empathie' },
+    { title: 'Communication', link: '/psy/communication/pouvoir-des-mots' },
+    { title: 'Codes sociaux', link: '/psy/codes-sociaux/' },
+    { title: 'Appartenance', link: '/psy/emotions/appartenance' },
+    { title: 'Solitude', link: '/systeme-social/solitude' },
+  ]}
+  intro="Ce parcours te guide pour comprendre tes patterns relationnels, sortir des liens qui t'épuisent et construire des relations qui te font grandir. Les relations, ça s'apprend — et ça commence par soi."
+  steps={[
+    {
+      title: "Étape 1 — Comprendre tes patterns (théorie de l'attachement)",
+      body: "Tes relations adultes portent souvent la trace de tes premières expériences d'attachement. Comprendre ton style d'attachement, c'est mettre des mots sur tes schémas répétitifs — et commencer à les transformer.",
+      links: [
+        { href: '/relations/attachement', text: "La théorie de l'attachement" },
+        { href: '/psy/emotions/appartenance', text: "Le besoin d'appartenance" },
+      ],
+    },
+    {
+      title: 'Étape 2 — Reconnaître les relations toxiques',
+      body: "Pas toutes les relations méritent d'être préservées. Cette étape t'aide à identifier les dynamiques toxiques — manipulation, emprise, relations asymétriques — pour ne plus les confondre avec de l'amour ou de l'amitié.",
+      links: [
+        { href: '/relations/relations-toxiques', text: 'Les relations toxiques : les reconnaître' },
+        { href: '/violence/', text: 'La violence dans les relations' },
+      ],
+    },
+    {
+      title: 'Étape 3 — Poser tes limites',
+      body: "Dire non sans culpabiliser, exprimer ses besoins sans agressivité, s'affirmer avec respect : les limites ne détruisent pas les relations, elles les protègent. Cette étape est souvent la plus transformatrice du parcours.",
+      links: [
+        { href: '/relations/limites', text: 'Poser ses limites' },
+        { href: '/psy/emotions/honte', text: 'Comprendre la honte pour la dépasser' },
+      ],
+    },
+    {
+      title: 'Étape 4 — Construire la confiance (en soi et en les autres)',
+      body: "La confiance est le ciment de toute relation durable. Mais elle commence en toi. Cette étape travaille les deux versants : te faire confiance et apprendre à faire confiance aux autres, sans naïveté.",
+      links: [
+        { href: '/confiance/confiance-en-soi', text: 'La confiance en soi' },
+        { href: '/confiance/confiance-en-les-autres', text: 'La confiance en les autres' },
+        { href: '/confiance/reconstruire', text: 'Reconstruire la confiance après une trahison' },
+      ],
+    },
+    {
+      title: 'Étape 5 — Cultiver les liens sains',
+      body: "Une fois les bases posées, cette étape t'apprend à nourrir tes relations au quotidien : l'empathie, la présence, la gratitude, la communication vraie. Des pratiques concrètes pour que tes liens grandissent avec toi.",
+      links: [
+        { href: '/psy/emotions/amour', text: "L'amour comme pratique quotidienne" },
+        { href: '/psy/emotions/gratitude', text: 'La gratitude dans les relations' },
+        { href: '/systeme-social/solitude', text: 'La solitude choisie vs la solitude subie' },
+      ],
+    },
+  ]}
+  resources={[
+    { href: '/relations/', text: 'Explorer les relations saines' },
+    { href: '/confiance/confiance-en-les-autres', text: 'Développer la confiance en les autres' },
+    { href: '/systeme-social/', text: 'Comprendre le système social' },
+    { href: '/relations/attachement', text: "Comprendre ton style d'attachement" },
+    { href: '/confiance/confiance-en-la-vie', text: 'La confiance en la vie' },
+    { href: '/deuil/', text: 'Le deuil relationnel' },
+    { href: '/psy/emotions/kit-sos-emotions', text: 'Le kit SOS émotions' },
+  ]}
+  closing="Les meilleures relations commencent par une relation saine avec toi-même."
+/>

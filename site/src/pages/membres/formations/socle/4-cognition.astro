@@ -1,0 +1,166 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  {
+    title: 'Cadre',
+    body: "Ici, tu ne cherches pas à avoir des pensées parfaites. Tu cherches à reconnaître des réflexes mentaux pour les regarder avec plus de précision.",
+  },
+  {
+    title: 'Temps',
+    body: "Prévois 20 à 30 minutes si tu lis tout le module et quelques minutes pour commencer le journal des pensées.",
+  },
+  {
+    title: 'Repère',
+    body: "Ne cherche pas à tout corriger d'un coup. Le travail cognitif devient utile quand il reste concret et répétable.",
+  },
+];
+
+const checklistItems = [
+  "Je reconnais au moins une pensée automatique récurrente.",
+  "Je peux nommer une ou deux distorsions cognitives.",
+  "J'ai commencé un journal des pensées.",
+  "Je distingue un peu mieux pensée automatique et pensée alternative.",
+  "Je vois mieux comment choisir mon parcours après le socle.",
+];
+
+const protocolItems = [
+  {
+    title: 'Pars d’une situation réelle',
+    body: "Choisis un moment récent où une émotion difficile a monté, puis note les faits sans tout de suite les interpréter.",
+  },
+  {
+    title: 'Repère la pensée automatique',
+    body: "Écris la phrase intérieure telle qu'elle est venue, même si elle paraît dure, absurde ou répétitive.",
+  },
+  {
+    title: 'Questionne sans te mentir',
+    body: "Cherche une pensée plus juste, pas forcément plus agréable. Le but est la précision, pas la positivité forcée.",
+  },
+  {
+    title: 'Observe ce que ça change',
+    body: "Regarde si cette pensée alternative modifie un peu l'émotion, la tension ou la suite de tes choix.",
+  },
+];
+
+const resourceItems = [
+  {
+    label: 'Journal des pensées',
+    detail: 'Le coeur pratique du module.',
+  },
+  {
+    label: 'Repères cognitifs',
+    detail: 'Beck, Ellis, Young, Neff.',
+  },
+  {
+    label: 'Parcours victimes',
+    detail: 'Poursuivre côté reconstruction.',
+    href: '/formations/victimes/',
+  },
+  {
+    label: 'Parcours auteurs',
+    detail: 'Poursuivre côté responsabilité et changement.',
+    href: '/formations/auteurs/',
+  },
+];
+
+const warningItems = [
+  "Ne transforme pas ce module en tribunal intérieur.",
+  "Ne te force pas à produire une pensée 'positive' qui sonne faux.",
+  "Si tu pars dans l'analyse infinie, reviens à une situation simple et concrète.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/socle/4-cognition/"
+  title="Module S4 — Tes schémas de pensée"
+  description="Version complète du quatrième module du socle : pensées automatiques, distorsions cognitives, schémas précoces, méthode ABCD et journal des pensées."
+  heroTitle="Module S4 — Tes schémas de pensée"
+  heroTagline="Ce module t'aide à voir ce qui tourne dans ta tête sans se présenter comme une simple pensée : réflexes automatiques, croyances profondes, interprétations qui prennent trop vite la place du réel."
+  moduleLabel="Version complète"
+  progressLabel="Socle commun · Module 4 sur 4"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/socle/4-cognition/', variant: 'secondary' }}
+  nextAction={{ text: 'Choisir le parcours victimes', link: '/formations/victimes/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Bienvenue dans le dernier module du socle. Tu as déjà travaillé la violence, le corps et la régulation. Ici,
+    tu regardes la couche mentale : les phrases intérieures, les interprétations automatiques, les schémas qui
+    colorent le réel sans toujours se faire remarquer.
+  </p>
+
+  <h3>Les pensées automatiques</h3>
+  <p>
+    Aaron Beck a montré à quel point nos pensées influencent nos émotions et nos comportements. Le plus délicat,
+    c'est que beaucoup de pensées arrivent toutes seules et se présentent comme des évidences. Elles ne disent pas
+    "je suis une hypothèse". Elles disent "voilà la vérité".
+  </p>
+
+  <h3>Les schémas profonds</h3>
+  <p>
+    Jeffrey Young a travaillé sur des schémas plus anciens et plus profonds : abandon, méfiance, honte,
+    dévalorisation, sentiment d'être cassé(e), impression que le monde est dangereux. Ces schémas ont souvent été
+    utiles pour survivre à un moment. Mais ils continuent parfois à tourner alors que le contexte a changé.
+  </p>
+
+  <h3>Les distorsions cognitives</h3>
+  <p>
+    Tout ou rien, catastrophisation, lecture de pensée, personnalisation, généralisation excessive, rejet du
+    positif. Ces distorsions ne sont pas des fautes morales. Ce sont des habitudes de traitement de l'information.
+    Les reconnaître ouvre déjà une petite distance.
+  </p>
+
+  <h3>La méthode ABCD</h3>
+  <p>
+    Albert Ellis a proposé un cadre simple :
+  </p>
+  <p>
+    <strong>A.</strong> le fait déclencheur
+  </p>
+  <p>
+    <strong>B.</strong> la croyance ou la pensée automatique
+  </p>
+  <p>
+    <strong>C.</strong> la conséquence émotionnelle et comportementale
+  </p>
+  <p>
+    <strong>D.</strong> la discussion, c'est-à-dire la remise en question de cette pensée
+  </p>
+  <p>
+    Le coeur du module est là : introduire de la nuance sans se raconter d'histoires.
+  </p>
+
+  <h3>Le dialogue intérieur et l’auto-compassion</h3>
+  <p>
+    Kristin Neff a montré que l'auto-compassion n'est pas de la mollesse. Elle aide souvent plus au changement que
+    l'attaque permanente contre soi. Si tu te parles comme à quelqu'un que tu détestes, ton système reste sous
+    pression. Si tu te parles avec plus d'humanité, tu ouvres plus facilement un espace de travail réel.
+  </p>
+
+  <h3>L’exercice : le journal des pensées</h3>
+  <p>
+    Choisis un moment difficile récent et note :
+  </p>
+  <p>
+    <strong>Ce qui s'est passé.</strong> Les faits.
+  </p>
+  <p>
+    <strong>La pensée automatique.</strong> La phrase intérieure brute.
+  </p>
+  <p>
+    <strong>L'émotion.</strong> Ce que ça a produit.
+  </p>
+  <p>
+    <strong>La pensée alternative.</strong> Une phrase plus juste, plus équilibrée, plus précise.
+  </p>
+
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    Si tu vois déjà un peu mieux qu'une pensée n'est pas forcément un fait, alors quelque chose a commencé à se
+    desserrer. Et c'est précisément ce qui rend la suite du parcours plus habitable.
+  </p>
+</FormationModulePrivateLayout>

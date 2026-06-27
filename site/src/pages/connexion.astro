@@ -1,0 +1,53 @@
+---
+import { SignIn } from '@clerk/astro/components';
+import StaticPageLayout from '../layouts/StaticPageLayout.astro';
+
+const isClerkEnabled = Boolean(import.meta.env.PUBLIC_CLERK_PUBLISHABLE_KEY);
+const authState = Astro.locals.auth?.();
+const redirectUrl = Astro.url.searchParams.get('redirect_url') || '/compte/';
+
+if (authState?.userId) {
+  return Astro.redirect('/compte/');
+}
+---
+
+<StaticPageLayout
+  currentPath="/connexion/"
+  title="Connexion membre"
+  description="La connexion membre Claiire vit ici. Cette route sert de point d'entree a l'auth web et mobile."
+  sectionLabel="Espace membre"
+  hero={{
+    title: 'Connexion membre',
+    tagline:
+      isClerkEnabled
+        ? "Connecte-toi ici pour retrouver ton compte Claiire, ton statut premium et tes acces membres."
+        : "Clerk n'est pas encore configure dans cet environnement. Cette page est prete pour le futur flux de connexion web et app.",
+    actions: [{ text: 'Revenir aux formations', link: '/formations/', variant: 'primary' }],
+  }}
+>
+  {isClerkEnabled ? (
+    <>
+      <p>
+        Une fois connecte(e), tu pourras retrouver ton compte Claiire, relier ton acces web et mobile, puis
+        recuperer tes contenus premium.
+      </p>
+
+      <SignIn fallbackRedirectUrl={redirectUrl} signUpUrl="/connexion/" />
+    </>
+  ) : (
+    <>
+      <h2>Ce qui est pret</h2>
+      <ul>
+        <li>route de connexion</li>
+        <li>protection serveur de <code>/membres/</code></li>
+        <li>point d'entree vers le futur compte membre</li>
+      </ul>
+
+      <h2>Ce qu'il manque encore</h2>
+      <p>
+        Il faut maintenant renseigner les cles Clerk pour activer le vrai parcours de connexion dans cet
+        environnement.
+      </p>
+    </>
+  )}
+</StaticPageLayout>

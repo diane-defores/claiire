@@ -1,0 +1,182 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  {
+    title: 'Cadre',
+    body: "Ici, tu ne cherches pas à te diagnostiquer. Tu cherches à mieux lire ce que ton système nerveux essaie de faire.",
+  },
+  {
+    title: 'Temps',
+    body: "Prévois 20 à 30 minutes pour la lecture et quelques minutes pour commencer la cartographie corporelle.",
+  },
+  {
+    title: 'Repère',
+    body: "Si certaines explications te soulagent et d'autres te secouent, c'est normal. Comprendre le corps change souvent la manière de se parler.",
+  },
+];
+
+const checklistItems = [
+  "Je comprends mieux les réactions de survie.",
+  "Je sais que freeze ou fawn ne sont pas des défauts moraux.",
+  "Je reconnais au moins un signal corporel qui revient chez moi.",
+  "Je comprends mieux l'idée de mémoire traumatique.",
+  "Je vois pourquoi la régulation vient après la compréhension.",
+];
+
+const protocolItems = [
+  {
+    title: 'Pars du corps réel',
+    body: "Observe un ou deux signaux concrets chez toi : respiration, mâchoire, gorge, ventre, épaules, agitation, sidération.",
+  },
+  {
+    title: 'Relie-les à une logique de survie',
+    body: "Demande-toi si ce signal ressemble plutôt à du combat, de la fuite, du figement ou de la soumission.",
+  },
+  {
+    title: 'Note sans te juger',
+    body: "Utilise une cartographie simple sur quelques jours pour voir ce qui revient, dans quels contextes et avec quelle intensité.",
+  },
+  {
+    title: 'Prépare la régulation',
+    body: "Une fois les signaux mieux repérés, tu seras mieux armé(e) pour le module suivant sur la stabilisation.",
+  },
+];
+
+const resourceItems = [
+  {
+    label: 'Cartographie corporelle',
+    detail: 'Une observation courte et répétée pour lire les signaux du système nerveux.',
+  },
+  {
+    label: 'Repères cliniques',
+    detail: 'Bruce Perry, van der Kolk, Porges.',
+  },
+  {
+    label: 'Trauma',
+    detail: 'Compléter avec le dossier éditorial trauma.',
+    href: '/psy/trauma/',
+  },
+  {
+    label: 'Module suivant',
+    detail: 'Passer de la lecture du corps à la régulation.',
+    href: '/formations/socle/3-stabilisation/',
+  },
+];
+
+const warningItems = [
+  "Ne transforme pas ce module en justification pour t'écraser ou te dire que tu es 'cassé(e)'.",
+  "Ne cherche pas à tout interpréter d'un coup à partir d'un seul signal corporel.",
+  "Si tu te sens très activé(e), fais une pause avant de poursuivre la lecture.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/socle/2-neurobiologie/"
+  title="Module S2 — Corps et cerveau"
+  description="Version complète du deuxième module du socle : cerveau sous menace, 4F, mémoire traumatique, polyvagale et cartographie corporelle."
+  heroTitle="Module S2 — Corps et cerveau"
+  heroTagline="Ce module t'aide à comprendre pourquoi le corps réagit parfois avant même que l'esprit ait mis des mots : alerte, fuite, figement, soumission, sidération, coupure."
+  moduleLabel="Version complète"
+  progressLabel="Socle commun · Module 2 sur 4"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/socle/2-neurobiologie/', variant: 'secondary' }}
+  nextAction={{ text: 'Continuer vers le module 3', link: '/formations/socle/3-stabilisation/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Merci d'être là pour ce deuxième module. Si tu as déjà eu l'impression que ton corps ne t'obéissait plus,
+    que tu sursautais pour rien, que tu te figeais sans comprendre, ou que tu te coupais complètement de toi-même,
+    ce que tu vis devient souvent plus lisible à partir d'ici.
+  </p>
+
+  <p>
+    Comprendre la neurobiologie du stress et du trauma ne règle pas tout. Mais ça change souvent radicalement la
+    manière de parler de soi. On passe plus facilement de "je suis faible" à "mon système nerveux a appris à survivre".
+  </p>
+
+  <h3>Le cerveau sous menace</h3>
+  <p>
+    Bruce Perry décrit un cerveau organisé par couches. Le tronc cérébral gère les fonctions vitales et la détection
+    rapide du danger. Le système limbique porte les émotions et la mémoire affective. Le cortex préfrontal aide à
+    réfléchir, nuancer, planifier et prendre du recul.
+  </p>
+  <p>
+    Sous menace, ce n'est pas le cortex qui mène le jeu. Le système passe en mode survie. Le corps priorise la
+    protection avant l'analyse. C'est pour ça qu'on peut se retrouver à agir, se figer ou se couper avant même de
+    comprendre ce qui se passe.
+  </p>
+
+  <h3>Les 4 grandes réactions de survie</h3>
+  <p>
+    <strong>Fight.</strong> Le corps se prépare à combattre : tension, colère, énergie, impulsion vers l'affrontement.
+  </p>
+  <p>
+    <strong>Flight.</strong> Le corps cherche à fuir : agitation, besoin de partir, anxiété, évitement.
+  </p>
+  <p>
+    <strong>Freeze.</strong> Le corps se fige : sidération, paralysie, impossibilité de parler ou de bouger.
+  </p>
+  <p>
+    <strong>Fawn.</strong> Le corps cherche à apaiser pour survivre : s'effacer, marcher sur des oeufs, anticiper
+    l'autre, oublier ses propres limites.
+  </p>
+  <p>
+    Aucune de ces réponses n'est un choix moral. Ce sont des stratégies de survie.
+  </p>
+
+  <h3>Le corps garde les traces</h3>
+  <p>
+    Bessel van der Kolk a rendu cette idée très claire : le trauma ne reste pas seulement dans les souvenirs
+    racontables. Il se loge aussi dans le corps. Une odeur, un son, une intonation, une posture peuvent réactiver
+    une alerte sans que tu aies le temps de faire le lien consciemment.
+  </p>
+  <p>
+    C'est ce qu'on appelle souvent la mémoire traumatique. Le système nerveux répond avec les données du passé
+    dès qu'il croit reconnaître un morceau de danger.
+  </p>
+
+  <h3>La théorie polyvagale</h3>
+  <p>
+    Stephen Porges aide à lire trois grands états : la sécurité et la connexion, la mobilisation face au danger,
+    et l'immobilisation quand le système bascule en sidération ou en coupure.
+  </p>
+  <p>
+    Ce cadre ne sert pas à coller des étiquettes. Il sert à repérer si ton système se sent plutôt en sécurité,
+    en alerte, ou en effondrement. Cette lecture prépare très bien le travail de régulation du module suivant.
+  </p>
+
+  <h3>La neuroplasticité comme point d’appui</h3>
+  <p>
+    Le cerveau change tout au long de la vie. Les circuits renforcés par la menace peuvent s'assouplir. Les
+    réactions automatiques peuvent évoluer. Ce n'est ni instantané ni magique. Mais c'est réel.
+  </p>
+
+  <h3>L’exercice : la cartographie corporelle</h3>
+  <p>
+    Pendant quelques jours, note trois éléments :
+  </p>
+  <p>
+    <strong>Le moment.</strong> Quand est-ce que ça se passe ?
+  </p>
+  <p>
+    <strong>Le signal corporel.</strong> Gorge serrée, respiration courte, mâchoire crispée, ventre noué, épaules hautes,
+    chaleur, lourdeur, vide, agitation.
+  </p>
+  <p>
+    <strong>Le contexte.</strong> Qu'est-ce qui se passait autour ou en toi juste avant ?
+  </p>
+  <p>
+    Le but n'est pas d'interpréter parfaitement. Le but est de commencer à lire les jauges de ton système nerveux.
+  </p>
+
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    Si tu comprends un peu mieux aujourd'hui pourquoi ton corps a combattu, fui, gelé ou cherché à apaiser, alors
+    tu n'es déjà plus en train de te raconter la même histoire sur toi. Cette précision n'est pas de la complaisance.
+    C'est le début d'une régulation plus juste.
+  </p>
+</FormationModulePrivateLayout>

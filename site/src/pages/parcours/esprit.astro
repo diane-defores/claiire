@@ -1,0 +1,77 @@
+---
+import ParcoursPage from '../../components/ParcoursPage.astro';
+---
+
+<ParcoursPage
+  currentPath="/parcours/esprit"
+  title="Parcours : Comprendre Ton Esprit"
+  description="Explore le fonctionnement de ton psychisme et développe ton intelligence émotionnelle"
+  hero={{
+    title: '🧠 Comprendre ton esprit',
+    tagline:
+      'Explore le fonctionnement de ton psychisme et développe ton intelligence émotionnelle',
+    actions: [{ text: 'Commencer le premier module', link: '/psy/', variant: 'primary' }],
+  }}
+  parcourId="esprit"
+  modules={[
+    { title: 'Introduction psychologie', link: '/psy/' },
+    { title: 'Émotions', link: '/psy/emotions/' },
+    { title: 'Approches cognitives', link: '/psy/approche/cognitive' },
+    { title: 'Résilience', link: '/psy/solution/resilience' },
+    { title: 'Mindfulness', link: '/psy/solution/mindfulness' },
+    { title: 'Biais cognitifs', link: '/psy/biais/' },
+  ]}
+  intro="Ce parcours te donne les outils pour te comprendre toi-même — tes pensées, tes émotions, tes schémas. Pas pour t'analyser à l'infini, mais pour agir avec plus de clarté, de liberté et d'alignement."
+  steps={[
+    {
+      title: 'Étape 1 — Connaître tes biais cognitifs',
+      body: "Ton cerveau prend des raccourcis. Certains t'aident, d'autres te piègent. Les biais cognitifs colorent ta perception de la réalité sans que tu t'en rendes compte. Les identifier, c'est déjà s'en affranchir partiellement.",
+      links: [
+        { href: '/psy/biais/', text: 'Les biais cognitifs : le guide' },
+        { href: '/psy/approche/cognitive', text: "L'approche cognitive en psychologie" },
+      ],
+    },
+    {
+      title: 'Étape 2 — Comprendre tes émotions',
+      body: "Les émotions ne sont pas des ennemies à réprimer. Ce sont des informations. Cette étape t'apprend à les nommer, les accueillir et les comprendre — pour ne plus les subir mais les traverser.",
+      links: [
+        { href: '/psy/emotions/', text: 'Comprendre ses émotions' },
+        { href: '/psy/emotions/joie', text: 'La joie' },
+        { href: '/psy/emotions/honte', text: 'La honte' },
+        { href: '/psy/emotions/kit-sos-emotions', text: 'Le kit SOS émotions' },
+      ],
+    },
+    {
+      title: 'Étape 3 — Travailler ta confiance',
+      body: "La confiance en soi n'est pas une qualité innée — c'est une compétence qui se développe. Cette étape démantèle les croyances limitantes et te donne des pratiques concrètes pour te faire davantage confiance.",
+      links: [
+        { href: '/confiance/confiance-en-soi', text: 'La confiance en soi' },
+        { href: '/confiance/confiance-en-la-vie', text: 'La confiance en la vie' },
+        { href: '/confiance/reconstruire', text: 'Reconstruire sa confiance' },
+      ],
+    },
+    {
+      title: 'Étape 4 — Fixer des objectifs clairs',
+      body: "Vouloir changer sans savoir vers quoi, c'est naviguer sans cap. Cette étape t'enseigne la science de la définition d'objectifs : comment les formuler pour qu'ils motivent vraiment, et comment rester sur la trajectoire quand ça coince.",
+      links: [{ href: '/objectifs/definir-ses-objectifs', text: 'Définir ses objectifs' }],
+    },
+    {
+      title: 'Étape 5 — Changer ses habitudes durablement',
+      body: "La transformation ne vient pas de la volonté seule — elle vient de la conception intelligente de tes habitudes. Cette dernière étape t'apprend à créer des automatismes qui te servent, et à défaire ceux qui t'entravent.",
+      links: [
+        { href: '/objectifs/changer-ses-habitudes', text: 'Changer ses habitudes durablement' },
+        { href: '/psy/solution/resilience', text: 'La résilience : rebondir après les épreuves' },
+      ],
+    },
+  ]}
+  resources={[
+    { href: '/psy/', text: 'Explorer la psychologie' },
+    { href: '/confiance/confiance-en-soi', text: 'Développer ta confiance en toi' },
+    { href: '/objectifs/', text: 'Clarifier tes objectifs' },
+    { href: '/bonheur/mental', text: 'Ton bien-être mental' },
+    { href: '/psy/solution/psychotherapie', text: 'La psychothérapie : quel type te convient ?' },
+    { href: '/psy/trauma/', text: 'Les traumatismes psychologiques' },
+    { href: '/psy/solution/mindfulness', text: 'La pleine conscience pour observer son esprit' },
+  ]}
+  closing="Mieux te connaître, c'est le début de tout le reste."
+/>

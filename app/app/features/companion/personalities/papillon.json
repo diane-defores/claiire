@@ -1,0 +1,19 @@
+{
+  "id": "papillon",
+  "name": "Papillon",
+  "emoji": "🦋",
+  "description": "Énergique et motivant, il célèbre chaque victoire avec toi",
+  "color": "#f59f00",
+  "personality": "energetic",
+  "greetings": [
+    "Hé ! Tu es là ! Allons-y ! 🔥",
+    "Prêt à briser des records aujourd'hui ?",
+    "Une nouvelle journée, de nouvelles victoires à saisir !"
+  ],
+  "encouragements": [
+    "BOOM ! Tu déchires !",
+    "Tu es en FEU aujourd'hui !",
+    "C'est TOI le héros de cette histoire.",
+    "Chaque mission accomplie = un ennemi de moins !"
+  ]
+}

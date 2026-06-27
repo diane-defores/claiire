@@ -1,0 +1,145 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  {
+    title: 'Cadre',
+    body: "Ici, tu ne cherches pas à devenir dur(e). Tu cherches à retrouver le droit d'exister avec des frontières plus claires.",
+  },
+  {
+    title: 'Temps',
+    body: "Prévois 20 à 30 minutes si tu lis tout le module et quelques minutes pour préparer une petite limite à tester.",
+  },
+  {
+    title: 'Repère',
+    body: "Commencer petit n'est pas fuir le vrai sujet. C'est souvent la façon la plus solide de reconstruire.",
+  },
+];
+
+const checklistItems = [
+  "Je comprends mieux pourquoi dire non me paraît parfois dangereux.",
+  "Je distingue mieux les petites limites et les grandes.",
+  "J'ai identifié au moins une situation sûre pour pratiquer.",
+  "Je comprends mieux la culpabilité-conditionnement.",
+  "Je vois le lien entre limites, sécurité et reconstruction.",
+];
+
+const protocolItems = [
+  {
+    title: 'Commence par reconnaître pour toi',
+    body: "Note ce qui t'a mis mal à l'aise, ce que tu aurais voulu dire, et ce qui serait plus juste pour toi.",
+  },
+  {
+    title: 'Choisis une limite de niveau 1',
+    body: "Prends une situation simple, dans une relation plutôt sûre, pour éviter de te remettre d'emblée au coeur du danger.",
+  },
+  {
+    title: 'Utilise une formule claire',
+    body: "Observation, ressenti, besoin, demande : une forme simple aide souvent à ne pas t'écraser ni attaquer.",
+  },
+  {
+    title: 'Observe avant et après',
+    body: "Note l'appréhension, la réaction de l'autre et ce que tu ressens après. C'est comme ça que le système apprend.",
+  },
+];
+
+const resourceItems = [
+  {
+    label: 'Niveaux de limites',
+    detail: 'Un repère simple pour ne pas commencer trop haut.',
+  },
+  {
+    label: 'CNV',
+    detail: 'Une structure claire pour dire quelque chose sans t’écraser.',
+  },
+  {
+    label: 'Confiance',
+    detail: 'Compléter avec la reconstruction de la confiance.',
+    href: '/confiance/reconstruire/',
+  },
+  {
+    label: 'Module suivant',
+    detail: 'Passer aux repères relationnels.',
+    href: '/formations/victimes/4-relations/',
+  },
+];
+
+const warningItems = [
+  "Ne commence pas par la personne la plus dangereuse de ta vie.",
+  "Ne lis pas une montée de culpabilité comme la preuve que ta limite est mauvaise.",
+  "Si une situation devient vraiment menaçante, reviens d'abord à la sécurité.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/victimes/3-limites/"
+  title="Module V3 — Poser tes limites"
+  description="Version complète du module limites : culpabilité, peur, niveaux de limites, CNV et reprise progressive du pouvoir personnel."
+  heroTitle="Module V3 — Poser tes limites"
+  heroTagline="Ce module t'aide à réapprendre quelque chose qui a pu devenir très dangereux dans une relation violente : sentir ce qui est acceptable pour toi, puis le dire sans t'effacer."
+  moduleLabel="Version complète"
+  progressLabel="Parcours victimes · Module 3 sur 6"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/victimes/3-limites/', variant: 'secondary' }}
+  nextAction={{ text: 'Continuer vers le module 4', link: '/formations/victimes/4-relations/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Ce module parle de limites. Pas de murs froids. Pas de dureté. Pas d'une version de toi qui deviendrait
+    brusquement inflexible. Il parle de quelque chose de plus profond : retrouver ce qui est acceptable pour toi,
+    et ce qui ne l'est pas.
+  </p>
+
+  <h3>Pourquoi dire non devient si difficile</h3>
+  <p>
+    Quand dire non a déjà déclenché du conflit, du rejet, de la violence ou de la punition, le corps apprend que
+    le non est dangereux. Plus tard, même dans une relation sûre, l'appréhension revient avant même que tu parles.
+  </p>
+
+  <h3>Les limites comme espace de vie</h3>
+  <p>
+    Une limite peut être physique, émotionnelle, temporelle, relationnelle ou numérique. Elle n'est pas là pour
+    écraser l'autre. Elle est là pour créer un espace où tu peux exister sans être envahi(e) en permanence.
+  </p>
+
+  <h3>Les quatre niveaux de limites</h3>
+  <p>
+    Il est souvent utile de ne pas commencer par les situations les plus chargées. Les petites limites du quotidien
+    préparent le terrain pour les limites plus centrales. C'est ce mouvement progressif qui aide le système nerveux
+    à comprendre qu'exprimer un besoin n'est pas automatiquement une catastrophe.
+  </p>
+
+  <h3>La culpabilité qui suit les limites</h3>
+  <p>
+    Il faut distinguer une vraie culpabilité-signal d'une culpabilité-conditionnement. La première dit parfois :
+    tu as dépassé quelque chose d'important pour toi. La seconde dit : tu n'as pas le droit d'avoir des besoins.
+    Ce module t'aide à reconnaître laquelle parle.
+  </p>
+
+  <h3>La CNV comme structure d’appui</h3>
+  <p>
+    Observation, ressenti, besoin, demande. Cette structure ne garantit pas un accord, mais elle t'aide à dire
+    quelque chose de clair sans t'effacer ni partir en attaque.
+  </p>
+
+  <h3>L’exercice : poser une limite de niveau 1</h3>
+  <p>
+    Choisis une situation simple dans une relation plutôt sûre. Formule une petite préférence ou une petite limite.
+    Note ton niveau d'appréhension avant, la réaction en face, puis ce que tu ressens après.
+  </p>
+
+  <h3>Le pouvoir personnel revient par micro-victoires</h3>
+  <p>
+    Tu ne récupères pas ta place en un grand geste héroïque. Tu la récupères souvent par accumulation de petites
+    expériences où tu dis quelque chose de vrai pour toi, et où tu constates que tu es encore là après.
+  </p>
+
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    Si tu comprends déjà un peu mieux que ta difficulté à poser des limites n'est pas un défaut mais une adaptation,
+    alors tu peux commencer à reconstruire autrement. Une limite à la fois.
+  </p>
+</FormationModulePrivateLayout>

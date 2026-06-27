@@ -1,0 +1,151 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  {
+    title: 'Cadre',
+    body: "Ici, tu apprends des outils, pas une performance. Une seule technique bien utilisée vaut mieux qu'un catalogue jamais pratiqué.",
+  },
+  {
+    title: 'Temps',
+    body: "Prévois 20 à 30 minutes pour lire et quelques minutes pour choisir ta première technique.",
+  },
+  {
+    title: 'Repère',
+    body: "Ne cherche pas à tout tester d'un coup. L'objectif est de construire une première base fiable.",
+  },
+];
+
+const checklistItems = [
+  "Je reconnais mieux le 'trop' et le 'pas assez'.",
+  "J'ai choisi au moins une technique de régulation.",
+  "Je comprends pourquoi la régulation passe par le corps.",
+  "J'ai commencé une pratique simple et réaliste.",
+  "Je vois mieux comment revenir vers plus d'équilibre.",
+];
+
+const protocolItems = [
+  {
+    title: 'Repère ton état',
+    body: "Demande-toi si tu es plutôt en hyperactivation, en hypoactivation, ou encore à l'intérieur de ta fenêtre de tolérance.",
+  },
+  {
+    title: 'Choisis un seul outil',
+    body: "Respiration, ancrage sensoriel, froid, mouvement, détente musculaire : prends celui qui te paraît le plus accessible.",
+  },
+  {
+    title: 'Pratique hors crise',
+    body: "Entraîne l'outil dans des moments calmes pour qu'il soit plus disponible quand l'intensité monte vraiment.",
+  },
+  {
+    title: 'Observe et ajuste',
+    body: "Regarde ce qui t'aide un peu, même modestement, et simplifie encore si nécessaire.",
+  },
+];
+
+const resourceItems = [
+  {
+    label: 'Fenêtre de tolérance',
+    detail: 'Un repère simple pour lire trop, pas assez et assez de stabilité.',
+  },
+  {
+    label: 'TIPP et ancrage',
+    detail: 'Des outils concrets pour les moments de débordement.',
+  },
+  {
+    label: 'Module précédent',
+    detail: 'Relire le corps et le système nerveux.',
+    href: '/formations/socle/2-neurobiologie/',
+  },
+  {
+    label: 'Module suivant',
+    detail: 'Passer aux schémas de pensée.',
+    href: '/formations/socle/4-cognition/',
+  },
+];
+
+const warningItems = [
+  "Ne te juge pas si une technique ne marche pas tout de suite.",
+  "N'utilise pas la régulation comme une injonction violente contre toi-même.",
+  "Si une pratique te coupe davantage, arrête-la et reviens à quelque chose de plus simple.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/socle/3-stabilisation/"
+  title="Module S3 — Réguler ses émotions"
+  description="Version complète du troisième module du socle : fenêtre de tolérance, ancrage, respiration, TIPP, lieu sûr et routine de régulation."
+  heroTitle="Module S3 — Réguler ses émotions"
+  heroTagline="Ce module t'aide à traverser l'intensité sans te noyer : reconnaître l'état du système nerveux, choisir un outil simple et l'entraîner pour qu'il t'aide vraiment."
+  moduleLabel="Version complète"
+  progressLabel="Socle commun · Module 3 sur 4"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/socle/3-stabilisation/', variant: 'secondary' }}
+  nextAction={{ text: 'Continuer vers le module 4', link: '/formations/socle/4-cognition/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Bienvenue dans ce troisième module. Tu as déjà compris que le corps et le système nerveux ne réagissent pas
+    "au hasard". Ici, tu commences à travailler avec ces réactions au lieu de leur demander de disparaître par
+    pure volonté.
+  </p>
+
+  <h3>La fenêtre de tolérance</h3>
+  <p>
+    Daniel Siegel et Pat Ogden ont aidé à diffuser un repère très utile : la fenêtre de tolérance. À l'intérieur,
+    tu peux ressentir, penser, parler, décider. Au-dessus, c'est le trop : panique, colère, emballement, tension.
+    En dessous, c'est le pas assez : engourdissement, vide, lourdeur, coupure, absence.
+  </p>
+  <p>
+    Quand la violence ou le stress chronique ont resserré cette fenêtre, on bascule plus vite hors de l'équilibre.
+    Le travail de régulation consiste à reconnaître ces bascules et à revenir un peu plus facilement vers un état
+    plus habitable.
+  </p>
+
+  <h3>Parler au système nerveux dans sa langue</h3>
+  <p>
+    Quand l'intensité est forte, ce ne sont pas les injonctions mentales qui changent le plus vite la situation.
+    Ce sont les signaux corporels : respiration, température, appuis, mouvement, sons, textures, détente musculaire.
+  </p>
+
+  <h3>Quelques outils concrets</h3>
+  <p>
+    <strong>Respiration.</strong> Allonger l'expiration aide souvent à envoyer un signal de ralentissement.
+  </p>
+  <p>
+    <strong>Ancrage sensoriel.</strong> Regarder, toucher, entendre, sentir, goûter : revenir aux sens aide à revenir
+    au présent.
+  </p>
+  <p>
+    <strong>TIPP.</strong> Le froid, le mouvement, la respiration pacée, la détente musculaire peuvent aider à couper
+    l'escalade.
+  </p>
+  <p>
+    <strong>Lieu sûr.</strong> Un espace réel ou mental qui aide ton système à se réorienter vers plus de sécurité.
+  </p>
+
+  <h3>La régularité vaut mieux que l’intensité</h3>
+  <p>
+    Le vrai changement vient souvent d'une pratique courte mais répétée. Deux ou trois minutes bien placées chaque
+    jour créent souvent plus d'effet qu'une grosse séance rare.
+  </p>
+
+  <h3>L’exercice : choisir une première technique</h3>
+  <p>
+    Choisis une seule technique. Pas toutes.
+  </p>
+  <p>
+    Essaie-la une fois par jour pendant une semaine, si possible hors crise. Note juste trois choses : quel outil,
+    dans quel moment, et si ça t'a aidé un peu, pas du tout, ou plutôt oui.
+  </p>
+
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    La régulation n'est pas une preuve de force morale. C'est un apprentissage. Si tu reconnais un peu mieux où tu
+    bascules, et si tu as déjà un outil simple pour revenir vers plus de stabilité, alors ce module t'a déjà fait
+    gagner du terrain.
+  </p>
+</FormationModulePrivateLayout>

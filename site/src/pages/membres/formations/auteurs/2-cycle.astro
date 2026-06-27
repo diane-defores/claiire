@@ -1,0 +1,154 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  {
+    title: 'Cadre',
+    body: "Ici, tu ne cherches pas une excuse. Tu cherches une carte assez précise pour repérer la répétition.",
+  },
+  {
+    title: 'Temps',
+    body: "Prévois 20 à 30 minutes si tu lis tout le module et quelques minutes pour cartographier un épisode réel.",
+  },
+  {
+    title: 'Repère',
+    body: "Plus tu pars d'un épisode concret, plus le travail sera utile. Le flou protège rarement durablement.",
+  },
+];
+
+const checklistItems = [
+  "Je reconnais mieux les phases de mon cycle.",
+  "J'ai identifié au moins deux déclencheurs personnels.",
+  "Je vois mieux certaines formes de contrôle chez moi.",
+  "J'ai cartographié au moins un épisode réel.",
+  "Je repère au moins un point d'interruption possible avant l'explosion.",
+];
+
+const protocolItems = [
+  {
+    title: 'Choisis un épisode représentatif',
+    body: "Pas le plus extrême, pas le plus anodin. Un épisode qui ressemble à ce qui revient souvent.",
+  },
+  {
+    title: 'Retrace la montée',
+    body: "Note le contexte, les déclencheurs, les premières tensions corporelles et les pensées qui ont pris la main.",
+  },
+  {
+    title: 'Regarde le contrôle en face',
+    body: "Observe les formes concrètes de domination, d'intimidation, d'humiliation, d'isolement ou de menace.",
+  },
+  {
+    title: 'Cherche le point d’interruption',
+    body: "Repère le moment où nommer, faire une pause, t'éloigner ou demander un relais aurait pu changer quelque chose.",
+  },
+];
+
+const resourceItems = [
+  {
+    label: 'Cartographie du cycle',
+    detail: 'L’outil central du module pour passer du flou à la structure.',
+  },
+  {
+    label: 'Repères cliniques',
+    detail: 'Walker, Duluth, Stark.',
+  },
+  {
+    label: 'Ressources auteurs',
+    detail: 'Un relais si la tension monte dans la vraie vie.',
+    href: '/violence/auteurs/',
+  },
+  {
+    label: 'Module suivant',
+    detail: 'Passer du cycle aux émotions.',
+    href: '/formations/auteurs/3-emotions/',
+  },
+];
+
+const warningItems = [
+  "Ne transforme pas les déclencheurs en alibi.",
+  "Ne reste pas seulement sur le moment de l'explosion : le cycle commence plus tôt.",
+  "Si tu sens qu'une vraie situation actuelle monte, éloigne-toi avant de continuer ce travail.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/auteurs/2-cycle/"
+  title="Module A2 — Comprendre ton cycle"
+  description="Version complète du deuxième module auteurs : cycle de Walker, roue du pouvoir et du contrôle, déclencheurs personnels et cartographie d'un épisode réel."
+  heroTitle="Module A2 — Comprendre ton cycle"
+  heroTagline="Ce module t'aide à voir la répétition avec assez de précision pour intervenir plus tôt : montée de tension, déclencheurs, formes de contrôle, explosion, justification, accalmie."
+  moduleLabel="Version complète"
+  progressLabel="Parcours auteurs · Module 2 sur 6"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/auteurs/2-cycle/', variant: 'secondary' }}
+  nextAction={{ text: 'Continuer vers le module 3', link: '/formations/auteurs/3-emotions/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Si tu es arrivé(e) à ce module, tu as déjà commencé à sortir du brouillard. Ici, tu vas regarder la mécanique
+    plus précisément. Le cycle. Les déclencheurs. Les bascules. Les moments où tout semble s'accélérer. Les
+    stratégies de contrôle qui s'installent parfois avant même l'explosion visible.
+  </p>
+
+  <h3>Le cycle comme structure</h3>
+  <p>
+    Lenore Walker a montré qu'il y a souvent une montée de tension, un incident, une phase de justification ou de
+    réconciliation, puis une accalmie avant le retour progressif de la tension. Le schéma exact peut varier, mais
+    l'idée centrale reste la même : ce n'est pas un accident pur. C'est une répétition.
+  </p>
+
+  <h3>Le pouvoir et le contrôle</h3>
+  <p>
+    La roue de Duluth aide à voir que la violence ne se résume pas à l'incident aigu. Elle peut aussi passer par
+    l'intimidation, l'humiliation, l'isolement, le déni, les menaces, l'utilisation des enfants, le contrôle
+    économique et d'autres formes de domination plus diffuses.
+  </p>
+  <p>
+    C'est souvent là que des personnes se disent : "je ne voyais pas ça comme de la violence". Justement. Ce module
+    sert à rendre visible ce qui était normalisé.
+  </p>
+
+  <h3>Les déclencheurs personnels</h3>
+  <p>
+    Un déclencheur n'excuse rien. Mais il aide à comprendre où la tension monte le plus vite : contradiction,
+    frustration, impression d'être ignoré(e), fatigue, alcool, humiliation, sensation de perdre le contrôle,
+    jalousie, peur de l'abandon, ou autre.
+  </p>
+  <p>
+    Les déclencheurs deviennent utiles quand tu peux les voir avant qu'ils te possèdent.
+  </p>
+
+  <h3>L’exercice : cartographier un épisode réel</h3>
+  <p>
+    Choisis un épisode représentatif. Retrace :
+  </p>
+  <p>
+    <strong>La montée.</strong> Qu'est-ce qui se passait ? Qu'est-ce qui a allumé la mèche ? Qu'as-tu ressenti dans le corps ?
+  </p>
+  <p>
+    <strong>La bascule.</strong> Quelles pensées ont pris la main ? Qu'as-tu fait concrètement ?
+  </p>
+  <p>
+    <strong>L'après.</strong> Qu'est-ce que tu t'es raconté ? Qu'as-tu fait pour calmer ou recoller ? Quand la tension est-elle revenue ?
+  </p>
+  <p>
+    Le but n'est pas de produire un document parfait. Le but est de créer une carte assez claire pour que le module
+    suivant ait quelque chose de concret à travailler.
+  </p>
+
+  <h3>Le point d’interruption</h3>
+  <p>
+    Le coeur du module est là : repérer un moment plus tôt. Le premier signe corporel. La première phrase intérieure.
+    Le premier réflexe de contrôle. Le moment où une pause, un retrait, une mise à distance ou une nomination claire
+    auraient pu empêcher l'escalade.
+  </p>
+
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    Si tu vois mieux aujourd'hui que ce qui te semblait surgir de nulle part suit en fait une logique, alors tu as
+    déjà gagné une chose essentielle : une possibilité d'action plus tôt dans le cycle.
+  </p>
+</FormationModulePrivateLayout>

@@ -1,0 +1,77 @@
+---
+import ParcoursPage from '../../components/ParcoursPage.astro';
+---
+
+<ParcoursPage
+  currentPath="/parcours/stress"
+  title="Parcours : Gérer Le Stress Et L'Anxiété"
+  description="Apprends à maîtriser ton stress et retrouver ton calme intérieur"
+  hero={{
+    title: "😰 Gérer le stress et l'anxiété",
+    tagline: "Apprends à maîtriser ton stress et retrouver ton calme intérieur",
+    actions: [{ text: 'Commencer le premier module', link: '/stress/', variant: 'primary' }],
+  }}
+  parcourId="stress"
+  modules={[
+    { title: 'Comprendre le stress', link: '/stress/' },
+    { title: 'Le bon et le mauvais stress', link: '/stress/bon-et-mauvais' },
+    { title: 'Solutions naturelles', link: '/stress/solutions-naturelles' },
+    { title: 'Cohérence cardiaque', link: '/systeme-immunitaire/coherence-cardiaque' },
+    { title: 'Nerf vague', link: '/systeme-nerveux/nerf-vague' },
+    { title: 'Respiration et relaxation', link: '/psy/solution/relaxation' },
+  ]}
+  intro="En suivant ce parcours, tu vas passer de subir ton stress à le comprendre — puis à le dompter. Des mécanismes biologiques aux outils pratiques : tout ce dont tu as besoin pour retrouver ton calme, même sous pression."
+  steps={[
+    {
+      title: 'Étape 1 — Comprendre le stress (mécanismes, physique, mental)',
+      body: "Avant de gérer le stress, il faut savoir ce qu'il est. Réponse de survie, cortisol, système nerveux autonome — cette étape pose les bases pour que tu arrêtes de te battre contre toi-même.",
+      links: [
+        { href: '/stress/', text: 'Comprendre le stress : mécanismes' },
+        { href: '/stress/physique', text: 'Le stress physique' },
+        { href: '/stress/psychique', text: 'Le stress psychique' },
+      ],
+    },
+    {
+      title: 'Étape 2 — Distinguer bon stress et stress toxique',
+      body: "Tout stress n'est pas l'ennemi. Le stress aigu peut te booster ; c'est le stress chronique qui épuise. Apprends à différencier les deux et à repérer quand tu bascules dans la zone danger.",
+      links: [
+        { href: '/stress/bon-et-mauvais', text: 'Le bon et le mauvais stress' },
+        { href: '/systeme-nerveux/stress-impact', text: "L'impact du stress sur le système nerveux" },
+      ],
+    },
+    {
+      title: 'Étape 3 — Agir sur le corps (nerf vague, cohérence cardiaque)',
+      body: "Ton corps a un frein naturel au stress : le système parasympathique. Cette étape te donne les outils pour l'activer — respiration, nerf vague, cohérence cardiaque. Des techniques validées scientifiquement que tu peux pratiquer n'importe où.",
+      links: [
+        { href: '/systeme-nerveux/nerf-vague', text: 'Le nerf vague : ton allié anti-stress' },
+        { href: '/systeme-immunitaire/coherence-cardiaque', text: 'La cohérence cardiaque' },
+      ],
+    },
+    {
+      title: "Étape 4 — Agir sur l'esprit (mindfulness, relaxation)",
+      body: "Le corps et l'esprit se répondent. Une fois que tu maîtrises les outils corporels, cette étape t'apprend à calmer le mental, à observer tes pensées sans être emporté par elles, et à te recentrer.",
+      links: [
+        { href: '/psy/solution/mindfulness', text: 'La pleine conscience (mindfulness)' },
+        { href: '/psy/solution/relaxation', text: 'Les techniques de relaxation' },
+      ],
+    },
+    {
+      title: "Étape 5 — Prévenir le burn-out et pérenniser l'équilibre",
+      body: "Gérer le stress ponctuellement, c'est bien. Ne plus en arriver là, c'est mieux. Cette dernière étape t'aide à identifier tes signaux d'alerte et à construire une hygiène de vie qui te protège sur la durée.",
+      links: [
+        { href: '/stress/solutions-naturelles', text: 'Solutions naturelles contre le stress' },
+        { href: '/burnout/', text: 'Le burn-out : reconnaître et prévenir' },
+      ],
+    },
+  ]}
+  resources={[
+    { href: '/stress/', text: 'Comprendre le stress en profondeur' },
+    { href: '/stress/solutions-naturelles', text: 'Les solutions naturelles anti-stress' },
+    { href: '/anxiete/', text: "Gérer l'anxiété" },
+    { href: '/systeme-nerveux/regulation-nerveuse', text: 'Réguler ton système nerveux' },
+    { href: '/sommeil/', text: "L'impact du stress sur le sommeil" },
+    { href: '/systeme-nerveux/nutrition-nerveuse', text: 'La nutrition nerveuse' },
+    { href: '/psy/solution/resilience', text: 'La résilience : rebondir après les épreuves' },
+  ]}
+  closing="Le calme n'est pas l'absence de tempête. C'est apprendre à naviguer dedans."
+/>

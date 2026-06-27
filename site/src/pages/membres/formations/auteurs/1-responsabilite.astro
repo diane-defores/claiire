@@ -1,0 +1,176 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  {
+    title: 'Cadre',
+    body: "Ici, tu n'es pas là pour te détruire. Tu es là pour voir plus clair et commencer un vrai travail de responsabilité.",
+  },
+  {
+    title: 'Temps',
+    body: "Prévois 20 à 30 minutes si tu lis tout le module et 10 minutes de plus si tu fais l'exercice par écrit.",
+  },
+  {
+    title: 'Repère',
+    body: "Si tu sens la défensive monter, ralentis. Ce n'est pas un signe d'échec. C'est souvent un signe que tu touches un point réel.",
+  },
+];
+
+const checklistItems = [
+  "Je reconnais au moins un de mes mécanismes de protection.",
+  "Je comprends mieux la différence entre culpabilité et honte.",
+  "J'ai commencé l'inventaire des explications.",
+  "Je peux regarder au moins une situation en pensant à l'impact sur l'autre.",
+  "Je vois mieux ce que veut dire responsabilité sans écrasement.",
+];
+
+const protocolItems = [
+  {
+    title: 'Choisis une situation réelle',
+    body: "Pars d'un épisode concret, pas d'une idée générale sur toi-même. Le travail est plus juste quand il s'appuie sur le réel.",
+  },
+  {
+    title: 'Note d’abord ta version intérieure',
+    body: "Écris les explications, les excuses, les contextes, les 'oui mais'. Il faut les voir avant de pouvoir les traverser.",
+  },
+  {
+    title: 'Reviens aux faits et à l’impact',
+    body: "Demande-toi ce qu'une caméra aurait vu, puis ce que l'autre a probablement vécu, au-delà de ton intention.",
+  },
+  {
+    title: 'Transforme l’écart en prochaine étape',
+    body: "Utilise ce que tu vois pour préparer la suite, pas pour t'écraser. C'est ce passage qui rend le module utile.",
+  },
+];
+
+const resourceItems = [
+  {
+    label: 'Inventaire des explications',
+    detail: 'L’exercice central du module pour sortir du brouillard.',
+  },
+  {
+    label: 'Repères cliniques',
+    detail: 'Festinger, Gilligan, Miller, Rollnick.',
+  },
+  {
+    label: 'Ressources auteurs',
+    detail: 'Un relais si tu sens qu’il faut immédiatement un cadre plus large.',
+    href: '/violence/auteurs/',
+  },
+  {
+    label: 'Module suivant',
+    detail: 'Comprendre ton cycle avant qu’il ne se rejoue.',
+    href: '/formations/auteurs/2-cycle/',
+  },
+];
+
+const warningItems = [
+  "Ne transforme pas ce module en procès intérieur infini.",
+  "Ne saute pas trop vite de la honte à l'excuse ou à la contre-attaque.",
+  "Si tu sens qu'une crise monte, éloigne-toi de la situation réelle avant de continuer le travail.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/auteurs/1-responsabilite/"
+  title="Module A1 — Sortir du brouillard"
+  description="Version complète du premier module auteurs : dissonance cognitive, honte, exercice d'inventaire et premiers repères de responsabilité."
+  heroTitle="Module A1 — Sortir du brouillard"
+  heroTagline="Ce module t'aide à voir ce que tes mécanismes de protection te cachent encore : justifications, minimisation, honte, écart entre qui tu veux être et ce que tu fais parfois."
+  moduleLabel="Version complète"
+  progressLabel="Parcours auteurs · Module 1 sur 6"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/auteurs/1-responsabilite/', variant: 'secondary' }}
+  nextAction={{ text: 'Continuer vers le module 2', link: '/formations/auteurs/2-cycle/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Merci d'être là. Ce premier module demande quelque chose de rare : regarder en face ce qu'on préférerait
+    parfois atténuer, relativiser ou oublier. Ce n'est pas une question de courage héroïque. C'est une question
+    de clarté.
+  </p>
+
+  <p>
+    Le but ici n'est pas de te réduire à tes pires comportements. Le but est de comprendre les mécanismes qui
+    t'empêchent encore de les regarder avec assez de précision pour changer vraiment.
+  </p>
+
+  <h3>Le cerveau qui se protège</h3>
+  <p>
+    Quand quelqu'un agit d'une manière qui contredit l'image qu'il a de lui-même, une tension apparaît. Leon
+    Festinger a appelé ça la dissonance cognitive. Cette tension est inconfortable. Alors le cerveau essaie
+    de la réduire.
+  </p>
+  <p>
+    C'est là qu'apparaissent la minimisation, l'externalisation, la normalisation et la rationalisation. "Ce
+    n'était pas si grave." "J'étais sous pression." "Tout le monde fait ça." "Je voulais protéger." Ces phrases
+    ne sont pas toujours calculées. Elles sont souvent automatiques. Mais tant qu'elles gardent le contrôle, la
+    transformation reste superficielle.
+  </p>
+
+  <h3>Pourquoi la honte complique tout</h3>
+  <p>
+    James Gilligan a beaucoup travaillé sur le lien entre honte et violence. La honte dit : "je suis mauvais".
+    La culpabilité dit : "j'ai fait quelque chose de mauvais". Cette différence est décisive.
+  </p>
+  <p>
+    La culpabilité peut ouvrir vers la réparation. La honte, elle, pousse souvent à se refermer, à fuir, à
+    attaquer ou à nier encore plus fort. C'est pour ça que l'objectif de ce module n'est pas de t'enfoncer dans
+    la honte. L'objectif est de rendre possible une responsabilité qui ne s'écroule pas au premier inconfort.
+  </p>
+
+  <h3>L’entretien motivationnel : utiliser l’écart au lieu de le fuir</h3>
+  <p>
+    William Miller et Stephen Rollnick ont montré que le changement durable prend plus de force quand il vient
+    d'une motivation intérieure claire. Une question compte particulièrement ici : quel est l'écart entre la
+    personne que tu veux être et la personne que tu es dans certains moments ?
+  </p>
+  <p>
+    Cet écart ne sert pas à te condamner. Il sert à orienter le travail. Si tu peux le regarder sans te protéger
+    immédiatement, il devient un moteur.
+  </p>
+
+  <h3>Responsabilité sans autoflagellation</h3>
+  <p>
+    Regarder clairement ce qui s'est passé n'oblige pas à te traiter comme un monstre. Ça oblige en revanche à
+    quitter les versions de l'histoire qui t'empêchent de voir l'impact réel sur l'autre.
+  </p>
+  <p>
+    La responsabilité commence quand tu peux tenir ensemble trois choses : les faits, l'impact, et la possibilité
+    de faire autrement. Si l'une des trois disparaît, le travail se tord.
+  </p>
+
+  <h3>L’exercice : l’inventaire des explications</h3>
+  <p>
+    Choisis une situation récente où ton comportement a causé de la peur, de la peine, de la confusion ou de la
+    honte à quelqu'un d'autre.
+  </p>
+  <p>
+    <strong>Première étape :</strong> écris les faits bruts. Ce qu'une caméra aurait vu.
+  </p>
+  <p>
+    <strong>Deuxième étape :</strong> écris ta version intérieure de l'époque. Les raisons, les circonstances, les
+    justifications, les "oui mais".
+  </p>
+  <p>
+    <strong>Troisième étape :</strong> enlève une à une ces explications et regarde ce qu'il reste.
+  </p>
+  <p>
+    <strong>Quatrième étape :</strong> demande-toi quel a été l'impact probable sur l'autre. Pas ton intention.
+    L'impact.
+  </p>
+  <p>
+    Cette dernière étape est souvent la plus difficile. C'est aussi celle qui ouvre le plus.
+  </p>
+
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    Le brouillard n'est pas seulement un manque de volonté. C'est un système de protection. Si tu reconnais mieux
+    aujourd'hui une justification automatique, un passage en minimisation, un réflexe de honte ou un vrai écart
+    entre l'image que tu veux avoir de toi et l'impact réel de certains comportements, alors le travail a déjà
+    commencé.
+  </p>
+</FormationModulePrivateLayout>

@@ -1,0 +1,19 @@
+{
+  "id": "lumo",
+  "name": "Lumo",
+  "emoji": "✨",
+  "description": "Sage et douce, elle guide avec calme et introspection",
+  "color": "#6c47ff",
+  "personality": "calm",
+  "greetings": [
+    "Bonjour, guerrier. Je suis là.",
+    "Une nouvelle journée, une nouvelle chance de briller.",
+    "Comment vas-tu, vraiment ?"
+  ],
+  "encouragements": [
+    "Chaque petit pas compte.",
+    "Tu as déjà traversé des tempêtes. Celle-ci aussi passera.",
+    "La douleur d'aujourd'hui est la force de demain.",
+    "Je crois en toi, même quand tu n'y crois pas."
+  ]
+}

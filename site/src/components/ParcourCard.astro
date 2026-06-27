@@ -1,0 +1,224 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  icon: string;
+  description: string;
+  color: string;
+  moduleCount: number;
+}
+
+const { id, title, icon, description, color, moduleCount } = Astro.props;
+---
+
+<a href={`/parcours/${id}`} class="parcour-card" data-parcour-id={id} data-module-count={moduleCount} style={`--parcour-color: ${color}`}>
+  <div class="parcour-card-inner">
+    <div class="parcour-header">
+      <div class="parcour-title-row">
+        <div class="parcour-icon-wrapper">
+          <span class="parcour-icon">{icon}</span>
+        </div>
+        <h3>{title}</h3>
+      </div>
+      <div class="parcour-module-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+        <span>{moduleCount} modules</span>
+      </div>
+    </div>
+    <div class="parcour-content">
+      <p>{description}</p>
+    </div>
+    <div class="parcour-footer">
+      <div class="parcour-progress-mini">
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill"></div>
+        </div>
+        <span class="progress-text">0%</span>
+      </div>
+      <span class="parcour-cta">
+        Commencer
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"/>
+          <path d="m12 5 7 7-7 7"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+</a>
+
+<style>
+  .parcour-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--site-surface);
+    border: 1px solid var(--site-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .parcour-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--parcour-color), color-mix(in srgb, var(--parcour-color) 60%, white));
+    opacity: 0.8;
+    transition: opacity 0.25s ease;
+  }
+
+  .parcour-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-strong);
+    border-color: var(--parcour-color);
+  }
+
+  .parcour-card:hover::before {
+    opacity: 1;
+  }
+
+  .parcour-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1rem;
+  }
+
+  .parcour-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .parcour-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .parcour-card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--site-text);
+    line-height: 1;
+  }
+
+  .parcour-icon-wrapper {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--parcour-color) 12%, transparent);
+    flex-shrink: 0;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                background 0.25s ease;
+  }
+
+  .parcour-card:hover .parcour-icon-wrapper {
+    transform: scale(1.08);
+    background: color-mix(in srgb, var(--parcour-color) 20%, transparent);
+  }
+
+  .parcour-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+
+  .parcour-module-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--sl-color-gray-3);
+    background: var(--sl-color-gray-6);
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+  }
+
+  .parcour-module-badge svg {
+    opacity: 0.7;
+  }
+
+  .parcour-content {
+    flex: 1;
+  }
+
+  .parcour-card p {
+    margin: 0;
+    color: var(--sl-color-gray-2);
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+
+  .parcour-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--sl-color-gray-6);
+    gap: 1rem;
+  }
+
+  .parcour-progress-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+  }
+
+  .progress-bar-bg {
+    flex: 1;
+    height: 4px;
+    background: var(--sl-color-gray-5);
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 80px;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--parcour-color);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+  }
+
+  .progress-text {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--sl-color-gray-3);
+    min-width: 2rem;
+  }
+
+  .parcour-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--parcour-color);
+    transition: gap 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .parcour-card:hover .parcour-cta {
+    gap: 0.6rem;
+  }
+</style>

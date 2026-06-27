@@ -1,0 +1,25 @@
+---
+import ParcourCard from './ParcourCard.astro';
+import { parcours } from '../config/parcours.js';
+---
+
+<div class="parcours-grid">
+  {parcours.map(p => (
+    <ParcourCard
+      id={p.id}
+      title={p.title}
+      icon={p.icon}
+      description={p.description}
+      color={p.color}
+      moduleCount={p.modules.length}
+    />
+  ))}
+</div>
+
+<script>
+  import { initParcourTracker } from '../scripts/parcours-tracker.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initParcourTracker();
+  });
+</script>

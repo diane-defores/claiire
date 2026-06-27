@@ -1,0 +1,214 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  {
+    title: 'Cadre',
+    body: "Tu n'as pas besoin d'aller vite. Le but ici est de comprendre ce qui se passe et de retrouver un peu plus de sécurité intérieure, pas de te forcer.",
+  },
+  {
+    title: 'Temps',
+    body: 'Prévois 20 à 30 minutes si tu lis tout le module et 10 minutes de plus si tu fais l’exercice cette semaine.',
+  },
+  {
+    title: 'Repère',
+    body: "Si tu sens que tu te submerges, arrête-toi, bouge un peu, bois de l'eau, reviens plus tard. Avancer doucement vaut mieux que t'ouvrir trop fort.",
+  },
+];
+
+const checklistItems = [
+  "Je comprends mieux que la guérison n'est pas linéaire.",
+  "Je peux nommer au moins une trace du trauma dans mon corps.",
+  "J'ai identifié au moins une perte que j'ai le droit de pleurer.",
+  "J'ai commencé la lettre non envoyée, même brièvement.",
+  "Je sais mieux si j'ai besoin d'un accompagnement professionnel.",
+];
+
+const protocolItems = [
+  {
+    title: 'Ancre-toi avant de commencer',
+    body: "Pose les pieds au sol, regarde autour de toi, et vérifie que tu es dans un moment assez calme pour lire sans te brusquer.",
+  },
+  {
+    title: 'Lis sans chercher à tout résoudre',
+    body: "Le premier objectif est de remettre de l'ordre et des mots sur ce que tu vis. Tu n'as pas besoin de tout ressentir d'un coup.",
+  },
+  {
+    title: 'Fais l’exercice en deux temps',
+    body: "Écris d'abord ce que tu aurais voulu dire, puis ce que tu as perdu et que tu as le droit de pleurer.",
+  },
+  {
+    title: 'Termine par un geste de retour au présent',
+    body: 'Marche un peu, respire lentement, appelle quelqu’un de sûr, ou note simplement une chose concrète que tu fais après cette lecture.',
+  },
+];
+
+const resourceItems = [
+  {
+    label: 'Checklist hebdomadaire',
+    detail: 'Une relecture simple pour voir où tu en es sans te juger.',
+  },
+  {
+    label: 'Exercice guidé',
+    detail: 'La lettre non envoyée en deux parties pour nommer et pleurer.',
+  },
+  {
+    label: 'Repères cliniques',
+    detail: 'Judith Herman, van der Kolk, Levine, EMDR, IFS, yoga sensible au trauma.',
+  },
+  {
+    label: 'Orientation',
+    detail: 'Quand ralentir, quand demander de l’aide, vers qui te tourner.',
+  },
+];
+
+const warningItems = [
+  "Ne fais pas cet exercice juste après une crise si tu te sens encore très activé(e).",
+  "Ne te force pas à raconter tous les détails pour que le travail soit légitime.",
+  "Si tu te sens dissocié(e), reviens d'abord au présent avant de continuer.",
+  "Si tu es en danger maintenant, privilégie la sécurité immédiate et les ressources d'urgence.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/victimes/2-guerison/"
+  title="Module V2 — Guérir du trauma"
+  description="Version complète du module sur la guérison traumatique après la violence, avec repères, exercice guidé, checklist et protocole."
+  heroTitle="Module V2 — Guérir du trauma"
+  heroTagline="Tu avances ici à ton rythme. Le but n'est pas de forcer la guérison, mais de comprendre comment elle se fait réellement et comment l'accompagner sans te brusquer."
+  moduleLabel="Version complète"
+  progressLabel="Parcours victimes · Module 2 sur 6"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/victimes/2-guerison/', variant: 'secondary' }}
+  nextAction={{ text: 'Continuer vers le module 3', link: '/formations/victimes/3-limites/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Merci d'être là. Ce module parle de guérison au sens réel du terme : pas "passer à autre chose",
+    pas "tourner la page", mais intégrer ce que tu as vécu pour que ça ne continue pas à gouverner ta vie
+    depuis l'ombre.
+  </p>
+
+  <p>
+    Si tu sens déjà de la fatigue en lisant ces lignes, ce n'est pas un signe que quelque chose ne va pas.
+    C'est souvent le signe que ton système nerveux comprend que tu touches à quelque chose d'important.
+    Tu peux avancer doucement.
+  </p>
+
+  <h3>Ce qu'est le trauma, et ce qu'il n'est pas</h3>
+  <p>
+    Le trauma n'est pas une preuve de fragilité. Ce n'est pas réservé aux situations que d'autres
+    jugeraient "assez graves". Le trauma, c'est ce qui se passe quand une expérience dépasse la capacité
+    du corps et du psychisme à faire face sur le moment.
+  </p>
+  <p>
+    La violence répétée, l'humiliation chronique, l'emprise, la peur constante, l'instabilité, les menaces,
+    tout cela peut laisser des traces traumatiques. Le problème n'est pas seulement l'événement. Le problème,
+    c'est ce que ton système nerveux a dû faire pour survivre et ce qu'il continue parfois à faire alors que
+    le danger est passé.
+  </p>
+
+  <h3>Pourquoi la guérison est rarement linéaire</h3>
+  <p>
+    Judith Herman décrit la guérison comme un processus en spirale. Tu peux comprendre une chose, puis avoir
+    l'impression de la reperdre. Tu peux te sentir plus solide pendant plusieurs semaines, puis être réactivé(e)
+    par une odeur, un lieu, une phrase, ou une dynamique relationnelle qui touche une mémoire plus profonde.
+  </p>
+  <p>
+    Ce n'est pas un échec. Ce n'est pas la preuve que tu inventes ou que tu exagères. C'est le fonctionnement
+    normal d'une intégration qui se fait par couches.
+  </p>
+
+  <h3>Les trois phases de la guérison selon Herman</h3>
+  <p>
+    <strong>1. La sécurité.</strong> Avant tout travail de fond, il faut assez de sécurité extérieure et intérieure
+    pour ne pas vivre en état d'alarme permanent. C'est le socle du module précédent.
+  </p>
+  <p>
+    <strong>2. Le souvenir et le deuil.</strong> C'est le coeur de ce module. Il ne s'agit pas de tout revivre en détail,
+    ni de te noyer dans le passé, mais de donner une place à ce qui s'est passé et à ce que ça t'a coûté.
+  </p>
+  <p>
+    <strong>3. La reconnexion.</strong> Petit à petit, la vie reprend de la place. Les désirs reviennent. Les projets
+    redeviennent pensables. Les relations peuvent redevenir habitables. Les modules suivants vont dans cette direction.
+  </p>
+
+  <h3>Le corps fait partie de la guérison</h3>
+  <p>
+    Bessel van der Kolk a beaucoup contribué à faire comprendre que le trauma se loge aussi dans le corps.
+    Peter Levine a montré que l'organisme garde parfois une réponse de survie inachevée : de la tension,
+    de l'agitation, de la sidération, ou au contraire une coupure avec les sensations.
+  </p>
+  <p>
+    C'est pour ça que certaines approches utiles ne passent pas seulement par le récit. L'EMDR, la Somatic
+    Experiencing, certains cadres corporels sensibles au trauma ou le travail avec les parties en IFS peuvent
+    aider à remettre du mouvement là où le système s'est figé.
+  </p>
+  <p>
+    L'enjeu n'est pas de trouver "la meilleure méthode" en théorie. L'enjeu est de trouver un cadre assez
+    sûr et assez ajusté pour que ton système nerveux n'ait plus besoin de rester coincé dans l'alerte ou l'effondrement.
+  </p>
+
+  <h3>Le deuil est une étape, pas une faiblesse</h3>
+  <p>
+    Dans les vécus de violence, il y a presque toujours des pertes. Parfois elles sont visibles : du temps,
+    de l'argent, une maison, des relations. Parfois elles sont plus intimes : la légèreté, la confiance,
+    la capacité à te sentir en sécurité avec toi-même ou avec quelqu'un d'autre.
+  </p>
+  <p>
+    La guérison ne consiste pas seulement à comprendre ce qui s'est passé. Elle consiste aussi à reconnaître
+    ce qui a été perdu. Le deuil ne te bloque pas. Très souvent, c'est ce qui permet enfin à quelque chose
+    de se relâcher.
+  </p>
+
+  <h3>La résilience n'est pas une obligation individuelle</h3>
+  <p>
+    Boris Cyrulnik a beaucoup insisté sur un point essentiel : la résilience n'est pas un héroïsme solitaire.
+    Elle dépend aussi des ressources disponibles autour de toi. Une personne fiable. Un groupe. Un thérapeute.
+    Une association. Un cadre qui aide à remettre du sens et de la sécurité.
+  </p>
+  <p>
+    Si tu as du mal à avancer seul(e), ce n'est pas un défaut de caractère. C'est parfois simplement le signe
+    qu'il te manque encore des appuis.
+  </p>
+
+  <h3>L'exercice de cette semaine : la lettre non envoyée</h3>
+  <p>
+    Fais cet exercice en deux parties, sur papier si possible.
+  </p>
+  <p>
+    <strong>Première partie : ce que tu aurais voulu dire.</strong> Écris sans politesse, sans mise en forme,
+    sans chercher à être juste ou raisonnable. Ce n'est pas une lettre à envoyer. C'est un espace pour laisser
+    sortir ce qui n'a peut-être jamais eu de place.
+  </p>
+  <p>
+    <strong>Deuxième partie : ce que tu as perdu et que tu as le droit de pleurer.</strong> Note les pertes
+    concrètes et invisibles. Le temps. La confiance. La légèreté. Des liens. Des parts de toi que tu essaies
+    encore de retrouver.
+  </p>
+  <p>
+    Tu peux garder, déchirer ou brûler ce que tu écris. Ce qui compte ici, ce n'est pas l'objet final. C'est
+    le mouvement de reconnaissance.
+  </p>
+
+  <h3>Comment savoir si tu as besoin d'un accompagnement plus structuré</h3>
+  <p>
+    Cherche un soutien professionnel ou associatif si tu te sens régulièrement submergé(e), dissocié(e), si tu
+    as du mal à rester dans ton quotidien, ou si l'exploration de ce module réactive trop fort ton corps et tes
+    émotions. Il n'y a rien à prouver en le faisant seul(e).
+  </p>
+  <p>
+    Si tu es en France et que tu as besoin d'un premier relais, le <strong>3919</strong> peut t'orienter. En cas
+    d'urgence immédiate, appelle le <strong>17</strong> ou le <strong>112</strong>.
+  </p>
+
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    La guérison prend le temps qu'elle prend. Elle ne suit pas une ligne droite. Elle passe par le corps,
+    par la sécurité, par le deuil, et souvent par la relation. Si tu comprends déjà mieux ça aujourd'hui,
+    tu n'es pas resté au même point qu'avant.
+  </p>
+</FormationModulePrivateLayout>

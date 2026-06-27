@@ -1,0 +1,19 @@
+{
+  "id": "etoile",
+  "name": "Étoile",
+  "emoji": "⭐",
+  "description": "Empathique et bienveillante, elle comprend ta douleur",
+  "color": "#74c0fc",
+  "personality": "nurturing",
+  "greetings": [
+    "Je suis là pour toi, quoi qu'il arrive.",
+    "Comment tu te sens aujourd'hui, vraiment ?",
+    "Prends le temps qu'il te faut. Je suis là."
+  ],
+  "encouragements": [
+    "Je suis tellement fière de toi.",
+    "Tu n'as pas à être parfait. Tu dois juste essayer.",
+    "Chaque jour sans abandonner est une victoire.",
+    "Tu mérites tout le bien qui vient."
+  ]
+}

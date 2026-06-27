@@ -1,0 +1,18 @@
+---
+import { AuthenticateWithRedirectCallback } from '@clerk/astro/components';
+import StaticPageLayout from '../layouts/StaticPageLayout.astro';
+---
+
+<StaticPageLayout
+  currentPath="/sso-callback/"
+  title="Retour de connexion"
+  description="Route de retour OAuth et SSO pour Clerk."
+  sectionLabel="Espace membre"
+  hero={{
+    title: 'Retour de connexion',
+    tagline: "Claiire finalise ta connexion en cours. Tu vas etre redirige(e) automatiquement.",
+  }}
+  robots="noindex, nofollow"
+>
+  <AuthenticateWithRedirectCallback />
+</StaticPageLayout>

@@ -1,0 +1,78 @@
+---
+import ParcourProgress from './ParcourProgress.astro';
+import StaticPageLayout from '../layouts/StaticPageLayout.astro';
+
+interface LinkItem {
+  href: string;
+  text: string;
+}
+
+interface StepItem {
+  title: string;
+  body: string;
+  links: LinkItem[];
+}
+
+interface Props {
+  currentPath: string;
+  title: string;
+  description: string;
+  hero: {
+    title: string;
+    tagline?: string;
+    actions?: Array<{ text: string; link: string; variant?: 'primary' | 'secondary' | 'minimal' }>;
+  };
+  parcourId: string;
+  modules: Array<{ title: string; link: string }>;
+  intro: string;
+  steps: StepItem[];
+  resources: LinkItem[];
+  closing: string;
+}
+
+const { currentPath, title, description, hero, parcourId, modules, intro, steps, resources, closing } = Astro.props;
+---
+
+<StaticPageLayout
+  currentPath={currentPath}
+  title={title}
+  description={description}
+  hero={hero}
+  sectionLabel="🎯 Parcours thématiques"
+>
+  <ParcourProgress parcourId={parcourId} modules={modules} />
+
+  <p>
+    <strong>{intro}</strong>
+  </p>
+
+  <hr />
+
+  {steps.map((step) => (
+    <>
+      <h2>{step.title}</h2>
+      <p>{step.body}</p>
+      {step.links.map((link) => (
+        <p>
+          → <a href={link.href}>{link.text}</a>
+        </p>
+      ))}
+      <hr />
+    </>
+  ))}
+
+  <h2>Pour aller plus loin</h2>
+  <ul>
+    {resources.map((resource) => (
+      <li>
+        <a href={resource.href}>{resource.text}</a>
+      </li>
+    ))}
+  </ul>
+
+  <hr />
+
+  <p>
+    <strong>{closing}</strong>
+  </p>
+</StaticPageLayout>

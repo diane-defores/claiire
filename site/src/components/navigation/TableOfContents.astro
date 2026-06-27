@@ -1,0 +1,32 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+}
+
+const { headings } = Astro.props;
+const items = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3);
+---
+
+{
+  items.length > 1 && (
+    <aside class="toc" aria-labelledby="page-toc-title">
+      <div class="toc__card">
+        <p class="toc__eyebrow">Sur cette page</p>
+        <h2 id="page-toc-title">Sommaire</h2>
+        <ol class="toc__list">
+          {items.map((heading) => (
+            <li class:list={['toc__item', `depth-${heading.depth}`]}>
+              <a href={`#${heading.slug}`}>{heading.text}</a>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </aside>
+  )
+}

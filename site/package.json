@@ -1,0 +1,52 @@
+{
+  "name": "claiire",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "dev:watch": "nodemon -w src/config -w astro.config.mjs --exec \"astro dev\"",
+    "start": "astro dev",
+    "build": "astro build",
+    "check": "astro check",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check-links": "node scripts/check-links.mjs",
+    "fix-links": "node scripts/fix-internal-links.mjs",
+    "member-access:set": "node scripts/set-clerk-member-access.mjs",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,md,mdx,astro}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,md,mdx,astro}\"",
+    "postinstall": "node scripts/postinstall.cjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/vercel": "^10.0.8",
+    "@astrojs/vue": "^6.0.1",
+    "@clerk/astro": "^3.0.15",
+    "@diane-winflowz/gamification": "github:dianedef/gamification#0cad1606d50e3e1dd48c65d278e05363e439f1bd",
+    "astro": "^6.4.8",
+    "remark-directive": "^3.0.1",
+    "sharp": "^0.32.6",
+    "unist-util-visit": "^5.1.0",
+    "vue": "^3.5.39"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@types/node": "^22.20.0",
+    "broken-link-checker": "^0.7.8",
+    "glob": "^11.1.0",
+    "markdown-link-check": "^3.14.2",
+    "nanoid": "^3.3.15",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.8.5",
+    "prettier-plugin-astro": "^0.14.1",
+    "title-case": "^4.3.2",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "path-to-regexp": "6.3.0"
+  },
+  "license": "UNLICENSED"
+}

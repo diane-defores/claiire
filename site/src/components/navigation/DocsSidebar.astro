@@ -1,0 +1,23 @@
+---
+import { findSidebarForPath } from '../../lib/navigation';
+import SidebarTree from './SidebarTree.astro';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const sidebarMatch = findSidebarForPath(currentPath);
+---
+
+{
+  sidebarMatch && (
+    <aside class="docs-sidebar" aria-label={`Navigation ${sidebarMatch.sidebar.label}`}>
+      <div class="docs-sidebar__card">
+        <p class="docs-sidebar__eyebrow">Navigation interne</p>
+        <h2>{sidebarMatch.sidebar.label}</h2>
+        <SidebarTree currentPath={currentPath} items={sidebarMatch.sidebar.items} />
+      </div>
+    </aside>
+  )
+}

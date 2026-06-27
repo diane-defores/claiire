@@ -1,0 +1,289 @@
+---
+import StaticPageLayout from './StaticPageLayout.astro';
+
+interface ActionLink {
+  text: string;
+  link: string;
+  variant?: 'primary' | 'secondary' | 'minimal';
+}
+
+interface BulletItem {
+  title?: string;
+  body: string;
+}
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface RelatedLink {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  currentPath: string;
+  title: string;
+  description: string;
+  sectionLabel?: string;
+  robots?: 'index, follow' | 'noindex, nofollow';
+  eyebrow?: string;
+  heroTitle?: string;
+  heroTagline?: string;
+  primaryAction: ActionLink;
+  secondaryAction?: ActionLink;
+  summaryTitle?: string;
+  summaryItems?: BulletItem[];
+  audienceTitle?: string;
+  audienceItems?: BulletItem[];
+  premiumTitle?: string;
+  premiumItems?: BulletItem[];
+  teaserTitle?: string;
+  teaserBody?: string;
+  faqs?: FaqItem[];
+  relatedLinks?: RelatedLink[];
+}
+
+const {
+  currentPath,
+  title,
+  description,
+  sectionLabel = 'Formation',
+  robots = 'index, follow',
+  eyebrow = 'Version publique',
+  heroTitle = title,
+  heroTagline = description,
+  primaryAction,
+  secondaryAction,
+  summaryTitle = 'Dans ce module, tu vas comprendre',
+  summaryItems = [],
+  audienceTitle = 'Ce module est pour toi si...',
+  audienceItems = [],
+  premiumTitle = 'Ce que tu débloques dans le module complet',
+  premiumItems = [],
+  teaserTitle = 'Extrait du module complet',
+  teaserBody,
+  faqs = [],
+  relatedLinks = [],
+} = Astro.props;
+
+const hero = {
+  title: heroTitle,
+  tagline: heroTagline,
+  actions: [primaryAction, secondaryAction].filter((action): action is ActionLink => Boolean(action)),
+};
+---
+
+<StaticPageLayout
+  currentPath={currentPath}
+  title={title}
+  description={description}
+  sectionLabel={sectionLabel}
+  hero={hero}
+  robots={robots}
+>
+  <section class="formation-shell formation-shell--public">
+    <header class="formation-shell__intro">
+      <p class="formation-shell__eyebrow">{eyebrow}</p>
+      <h2>Version publique du module</h2>
+      <p>
+        Tu trouves ici le cadre, les repères essentiels et un premier niveau d'aide concret.
+        La version complète ajoute la partie guidée, les exercices, les protocoles et les ressources premium.
+      </p>
+    </header>
+
+    <section class="formation-block">
+      <h3>Commencer ici</h3>
+      <div class="formation-richtext">
+        <slot />
+      </div>
+    </section>
+
+    {summaryItems.length > 0 && (
+      <section class="formation-block">
+        <h3>{summaryTitle}</h3>
+        <ul class="formation-list">
+          {summaryItems.map((item) => (
+            <li>
+              {item.title && <strong>{item.title} — </strong>}
+              {item.body}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {audienceItems.length > 0 && (
+      <section class="formation-block">
+        <h3>{audienceTitle}</h3>
+        <ul class="formation-list formation-list--checks">
+          {audienceItems.map((item) => (
+            <li>
+              {item.title && <strong>{item.title} — </strong>}
+              {item.body}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {premiumItems.length > 0 && (
+      <section class="formation-block formation-block--premium">
+        <h3>{premiumTitle}</h3>
+        <ul class="formation-list">
+          {premiumItems.map((item) => (
+            <li>
+              {item.title && <strong>{item.title} — </strong>}
+              {item.body}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {(teaserBody || primaryAction) && (
+      <section class="formation-block formation-block--locked">
+        <div class="formation-lockup">
+          <p class="formation-lockup__label">Contenu verrouillé</p>
+          <h3>{teaserTitle}</h3>
+          {teaserBody && <p>{teaserBody}</p>}
+          <div class="formation-lockup__actions">
+            <a class:list={['button', `button--${primaryAction.variant ?? 'primary'}`]} href={primaryAction.link}>
+              {primaryAction.text}
+            </a>
+            {secondaryAction && (
+              <a class:list={['button', `button--${secondaryAction.variant ?? 'secondary'}`]} href={secondaryAction.link}>
+                {secondaryAction.text}
+              </a>
+            )}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {faqs.length > 0 && (
+      <section class="formation-block">
+        <h3>FAQ</h3>
+        <div class="formation-faq">
+          {faqs.map((faq) => (
+            <details>
+              <summary>{faq.question}</summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {relatedLinks.length > 0 && (
+      <section class="formation-block">
+        <h3>Aller plus loin</h3>
+        <div class="formation-related">
+          {relatedLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))}
+        </div>
+      </section>
+    )}
+  </section>
+</StaticPageLayout>
+
+<style>
+  .formation-shell {
+    display: grid;
+    gap: 1.5rem;
+    margin: 0 auto;
+    max-width: 58rem;
+  }
+
+  .formation-shell__intro,
+  .formation-block {
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--sl-color-bg) 92%, white 8%), var(--sl-color-bg));
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgb(15 23 42 / 0.05);
+  }
+
+  .formation-shell__eyebrow,
+  .formation-lockup__label {
+    color: var(--sl-color-text-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.4rem;
+    text-transform: uppercase;
+  }
+
+  .formation-block--premium {
+    border-color: color-mix(in srgb, var(--sl-color-accent-high) 35%, var(--sl-color-gray-5));
+  }
+
+  .formation-block--locked {
+    background:
+      linear-gradient(135deg, color-mix(in srgb, var(--sl-color-orange-low) 72%, white 28%), var(--sl-color-bg));
+    border-color: color-mix(in srgb, var(--sl-color-orange) 40%, var(--sl-color-gray-5));
+  }
+
+  .formation-lockup__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .formation-list {
+    display: grid;
+    gap: 0.85rem;
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .formation-list--checks {
+    list-style: '✓  ';
+  }
+
+  .formation-faq {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .formation-faq details {
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 1rem;
+    padding: 1rem 1.1rem;
+    background: color-mix(in srgb, var(--sl-color-bg) 95%, white 5%);
+  }
+
+  .formation-faq summary {
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .formation-related {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .formation-related a {
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 999px;
+    padding: 0.65rem 1rem;
+    text-decoration: none;
+  }
+
+  @media (max-width: 720px) {
+    .formation-shell__intro,
+    .formation-block {
+      padding: 1.2rem;
+      border-radius: 1rem;
+    }
+
+    .formation-lockup__actions {
+      flex-direction: column;
+    }
+  }
+</style>

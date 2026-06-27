@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+**/dist/
+site/.astro/
+**/.astro/
+site/.vercel/
+**/.vercel/
+
+# Tool caches
+.flox/
+**/.flox/
+.claude/
+.vscode/
+**/.vscode/
+.agent/
+**/.agent/
+.augment/
+**/.augment/
+.kilocode/
+**/.kilocode/
+
+# Logs and temp
+*.log
+*.tmp
+*.sqlite
+*.sqlite3
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+

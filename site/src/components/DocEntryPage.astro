@@ -1,0 +1,16 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import DocsLayout from '../layouts/DocsLayout.astro';
+
+interface Props {
+  currentPath: string;
+  entry: CollectionEntry<'docs'>;
+}
+
+const { currentPath, entry } = Astro.props;
+const { Content, headings } = await render(entry);
+---
+
+<DocsLayout currentPath={currentPath} entry={entry} headings={headings}>
+  <Content />
+</DocsLayout>

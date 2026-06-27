@@ -1,0 +1,82 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  { title: 'Cadre', body: "Le but ici n'est pas de refaire confiance vite. Le but est de retrouver des repères plus fins et plus sûrs." },
+  { title: 'Temps', body: "Prévois 20 à 30 minutes si tu lis tout le module et quelques minutes pour la carte relationnelle." },
+  { title: 'Repère', body: "Prudence et fermeture totale ne sont pas la même chose. Le travail se situe souvent entre les deux." },
+];
+
+const checklistItems = [
+  "Je reconnais un peu mieux mon fonctionnement d'attachement.",
+  "Je sais mieux ce qui distingue relation saine et relation problématique.",
+  "J'ai commencé ma carte relationnelle.",
+  "Je vois qu'on peut avancer lentement sans être en retard.",
+  "Je comprends mieux le lien entre relation à soi et relation aux autres.",
+];
+
+const protocolItems = [
+  { title: 'Observe le lien sans juger', body: "Regarde comment tu surveilles, t'approches, te retires ou doutes dans les relations actuelles." },
+  { title: 'Cartographie ton entourage', body: "Repère qui nourrit, qui vide, qui est fiable dans les actes et qui reste flou." },
+  { title: 'Privilégie les petits liens sûrs', body: "Commence par des relations à faible intensité émotionnelle pour réentraîner le système nerveux à la connexion." },
+  { title: 'Fais de la place à toi aussi', body: "Observe comment tu te parles et ce que ça change dans ce que tu acceptes des autres." },
+];
+
+const resourceItems = [
+  { label: 'Attachement', detail: 'Bowlby, Ainsworth, Sue Johnson.' },
+  { label: 'Repères relationnels', detail: 'Gottman, tentatives de réparation, cohérence, petits moments.' },
+  { label: 'Confiance', detail: 'Compléter avec la reconstruction de la confiance.', href: '/confiance/reconstruire/' },
+  { label: 'Module suivant', detail: "Passer vers l'autonomie.", href: '/formations/victimes/5-autonomie/' },
+];
+
+const warningItems = [
+  "Ne te force pas à accélérer une relation pour prouver que tu avances.",
+  "Ne prends pas toute méfiance pour de la lucidité ni toute ouverture pour de la naïveté.",
+  "Si une relation réactive fortement ton système, ralentis avant d'aller plus loin.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/victimes/4-relations/"
+  title="Module V4 — Reconstruction relationnelle"
+  description="Version complète du module relations : attachement, repères de relation saine, carte relationnelle et reconstruction graduelle de la confiance."
+  heroTitle="Module V4 — Reconstruction relationnelle"
+  heroTagline="Ce module t'aide à retrouver des repères là où la violence a brouillé la lecture du lien : attachement, sécurité, confiance, prudence, cohérence, qualité du contact."
+  moduleLabel="Version complète"
+  progressLabel="Parcours victimes · Module 4 sur 6"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/victimes/4-relations/', variant: 'secondary' }}
+  nextAction={{ text: 'Continuer vers le module 5', link: '/formations/victimes/5-autonomie/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Reconstruire ses relations après la violence est souvent l'un des endroits les plus délicats du parcours. Le lien a été blessé, et pourtant c'est aussi dans le lien qu'une partie de la réparation se rejoue.
+  </p>
+  <h3>L'attachement comme boussole</h3>
+  <p>
+    Bowlby et Ainsworth aident à lire des styles d'attachement qui ne sont pas des condamnations mais des apprentissages du lien. Anxieux, évitant, désorganisé, plus sécure : ce qui compte n'est pas l'étiquette, mais la façon dont tu surveilles, cherches, évites ou doutes dans les relations.
+  </p>
+  <h3>Les signes d'une relation plus saine</h3>
+  <p>
+    Gottman montre que la qualité d'une relation tient souvent à des choses très concrètes : respect, réparation après conflit, curiosité, cohérence entre les mots et les actes, absence de mépris et de peur comme toile de fond.
+  </p>
+  <h3>La confiance se construit</h3>
+  <p>
+    Elle ne se décide pas, et elle ne se mérite pas en un seul jour. Elle se construit dans la répétition de petits faits cohérents. C'est pour ça qu'il est souvent plus juste de commencer par des relations à faible intensité émotionnelle, où le système peut réapprendre la sécurité sans être submergé.
+  </p>
+  <h3>La carte relationnelle</h3>
+  <p>
+    Place-toi au centre d'une feuille. Puis place autour les personnes de ta vie selon la distance que tu ressens. Note ensuite qui nourrit, qui vide, qui est fiable dans les actes, qui laisse une impression floue, et où sont les vides relationnels que tu aurais besoin de regarder.
+  </p>
+  <h3>La relation à toi-même</h3>
+  <p>
+    La façon dont tu te parles structure aussi ce que tu acceptes des autres. Sans avoir besoin de "t'aimer parfaitement", tu peux commencer à te traiter avec plus d'humanité. Cette évolution change le terrain sur lequel les relations se construisent.
+  </p>
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    Si tu vois déjà un peu mieux ce qui te protège, ce qui te ferme, ce qui te nourrit et ce qui te brouille, alors tu as déjà récupéré des repères relationnels précieux.
+  </p>
+</FormationModulePrivateLayout>

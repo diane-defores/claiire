@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 200 30% 98%;
+  --foreground: 200 40% 20%;
+
+  --muted: 200 20% 96%;
+  --muted-foreground: 200 40% 40%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 200 40% 20%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 200 40% 20%;
+
+  --border: 200 20% 90%;
+  --input: 200 20% 90%;
+
+  --primary: 200 60% 45%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 120 60% 40%;
+  --secondary-foreground: 0 0% 100%;
+
+  --accent: 120 60% 40%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --ring: 200 60% 45%;
+
+  --radius: 0.5rem;
+
+  --gradient-start: 200 30% 98%;
+  --gradient-end: 200 30% 93%;
+  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--card-shadow);
+  @apply rounded-lg;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure content doesn't shift during transitions */
+body {
+  overflow-y: scroll;
+}
+
+/* Improve animation performance */
+* {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Prevent layout shifts during transitions */
+main {
+  min-height: calc(100vh - 64px - 56px); /* Adjust based on your header and navigation heights */
+}
+
+/* Respect user's reduced motion settings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+.h1 {
+  @apply text-4xl font-extrabold tracking-tight;
+}
+.h2 {
+  @apply text-3xl font-semibold tracking-tight;
+}
+.h3 {
+  @apply text-2xl font-semibold tracking-tight;
+}
+.h4 {
+  @apply text-xl font-semibold tracking-tight;
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 ease-in-out;
+}
+.hover-lift:hover {
+  @apply -translate-y-1;
+}
+
+.progress-ring {
+  @apply relative inline-flex;
+}
+.progress-ring circle {
+  @apply transition-all duration-300 ease-in-out;
+}
+

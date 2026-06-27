@@ -1,0 +1,265 @@
+---
+import StaticPageLayout from './StaticPageLayout.astro';
+
+interface ActionLink {
+  text: string;
+  link: string;
+  variant?: 'primary' | 'secondary' | 'minimal';
+}
+
+interface BulletItem {
+  title?: string;
+  body: string;
+}
+
+interface ResourceItem {
+  label: string;
+  detail?: string;
+  href?: string;
+}
+
+interface Props {
+  currentPath: string;
+  title: string;
+  description: string;
+  sectionLabel?: string;
+  robots?: 'index, follow' | 'noindex, nofollow';
+  heroTitle?: string;
+  heroTagline?: string;
+  moduleLabel?: string;
+  progressLabel?: string;
+  backAction?: ActionLink;
+  nextAction?: ActionLink;
+  recapItems?: BulletItem[];
+  checklistItems?: string[];
+  protocolItems?: BulletItem[];
+  resourceItems?: ResourceItem[];
+  warningItems?: string[];
+}
+
+const {
+  currentPath,
+  title,
+  description,
+  sectionLabel = 'Espace membre',
+  robots = 'noindex, nofollow',
+  heroTitle = title,
+  heroTagline = description,
+  moduleLabel = 'Version complète',
+  progressLabel,
+  backAction,
+  nextAction,
+  recapItems = [],
+  checklistItems = [],
+  protocolItems = [],
+  resourceItems = [],
+  warningItems = [],
+} = Astro.props;
+
+const hero = {
+  title: heroTitle,
+  tagline: heroTagline,
+  actions: [backAction, nextAction].filter((action): action is ActionLink => Boolean(action)),
+};
+---
+
+<StaticPageLayout
+  currentPath={currentPath}
+  title={title}
+  description={description}
+  sectionLabel={sectionLabel}
+  hero={hero}
+  robots={robots}
+>
+  <section class="member-shell">
+    <header class="member-shell__intro">
+      <div>
+        <p class="member-shell__eyebrow">{moduleLabel}</p>
+        <h2>Version intégrale du module</h2>
+      </div>
+      {progressLabel && <p class="member-shell__progress">{progressLabel}</p>}
+    </header>
+
+    {recapItems.length > 0 && (
+      <section class="member-block">
+        <h3>Avant de commencer</h3>
+        <ul class="member-list">
+          {recapItems.map((item) => (
+            <li>
+              {item.title && <strong>{item.title} — </strong>}
+              {item.body}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section class="member-block member-block--content">
+      <h3>Contenu intégral</h3>
+      <div class="member-richtext">
+        <slot />
+      </div>
+    </section>
+
+    {checklistItems.length > 0 && (
+      <section class="member-block">
+        <h3>Checklist pratique</h3>
+        <ul class="member-checklist">
+          {checklistItems.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {protocolItems.length > 0 && (
+      <section class="member-block">
+        <h3>Protocole</h3>
+        <ol class="member-protocol">
+          {protocolItems.map((item) => (
+            <li>
+              {item.title && <strong>{item.title}</strong>}
+              <p>{item.body}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    {resourceItems.length > 0 && (
+      <section class="member-block member-block--resources">
+        <h3>Ressources premium</h3>
+        <div class="member-resources">
+          {resourceItems.map((item) => (
+            item.href ? (
+              <a href={item.href}>
+                <strong>{item.label}</strong>
+                {item.detail && <span>{item.detail}</span>}
+              </a>
+            ) : (
+              <div>
+                <strong>{item.label}</strong>
+                {item.detail && <span>{item.detail}</span>}
+              </div>
+            )
+          ))}
+        </div>
+      </section>
+    )}
+
+    {warningItems.length > 0 && (
+      <section class="member-block member-block--warning">
+        <h3>Points de vigilance</h3>
+        <ul class="member-list">
+          {warningItems.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </section>
+</StaticPageLayout>
+
+<style>
+  .member-shell {
+    display: grid;
+    gap: 1.5rem;
+    margin: 0 auto;
+    max-width: 60rem;
+  }
+
+  .member-shell__intro,
+  .member-block {
+    background: linear-gradient(180deg, color-mix(in srgb, var(--sl-color-bg) 94%, white 6%), var(--sl-color-bg));
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 12px 32px rgb(15 23 42 / 0.06);
+  }
+
+  .member-shell__intro {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .member-shell__eyebrow {
+    color: var(--sl-color-text-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.4rem;
+    text-transform: uppercase;
+  }
+
+  .member-shell__progress {
+    background: color-mix(in srgb, var(--sl-color-accent-low) 70%, white 30%);
+    border-radius: 999px;
+    font-size: 0.92rem;
+    margin: 0;
+    padding: 0.55rem 0.9rem;
+    white-space: nowrap;
+  }
+
+  .member-block--content {
+    border-color: color-mix(in srgb, var(--sl-color-accent-high) 35%, var(--sl-color-gray-5));
+  }
+
+  .member-block--warning {
+    background: linear-gradient(180deg, color-mix(in srgb, var(--sl-color-orange-low) 70%, white 30%), var(--sl-color-bg));
+    border-color: color-mix(in srgb, var(--sl-color-orange) 40%, var(--sl-color-gray-5));
+  }
+
+  .member-list,
+  .member-checklist,
+  .member-protocol {
+    display: grid;
+    gap: 0.85rem;
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .member-checklist {
+    list-style: '□  ';
+  }
+
+  .member-protocol li p {
+    margin: 0.35rem 0 0;
+  }
+
+  .member-resources {
+    display: grid;
+    gap: 0.85rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .member-resources a,
+  .member-resources div {
+    background: color-mix(in srgb, var(--sl-color-bg) 96%, white 4%);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 1rem;
+    display: grid;
+    gap: 0.35rem;
+    padding: 1rem;
+    text-decoration: none;
+  }
+
+  .member-resources span {
+    color: var(--sl-color-text-soft);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 720px) {
+    .member-shell__intro,
+    .member-block {
+      padding: 1.2rem;
+      border-radius: 1rem;
+    }
+
+    .member-shell__intro {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

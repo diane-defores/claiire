@@ -1,0 +1,82 @@
+---
+import FormationModulePrivateLayout from '../../../../layouts/FormationModulePrivateLayout.astro';
+
+const recapItems = [
+  { title: 'Cadre', body: "Ici, tu n'ouvres pas un nouveau chantier. Tu consolides ce que tu as déjà commencé à construire." },
+  { title: 'Temps', body: "Prévois 20 à 30 minutes si tu lis tout le module et quelques minutes pour noter tes signaux d'alerte et tes ancrages." },
+  { title: 'Repère', body: "Un moment difficile n'est pas forcément une rechute complète. Le sujet est de savoir quoi faire tôt." },
+];
+
+const checklistItems = [
+  "Je comprends mieux la différence entre lapse et relapse.",
+  "J'ai identifié quelques signaux d'alerte personnels.",
+  "J'ai associé au moins un ancrage concret à un signal.",
+  "Je vois mieux quelles habitudes très petites je veux maintenir.",
+  "Je sais un peu mieux vers qui ou quoi me tourner si ça glisse.",
+];
+
+const protocolItems = [
+  { title: "Repère les glissements précoces", body: "Isolement, fatigue ignorée, dialogue intérieur plus dur, soins abandonnés, minimisation qui revient : note ce qui te parle vraiment." },
+  { title: 'Associe un ancrage à chaque signal', body: "Quand [signal], je [petite action]. L'action doit être réaliste, visible et assez simple pour exister les mauvais jours." },
+  { title: 'Garde un appui humain', body: "Une personne, un thérapeute, un groupe, une structure : quelque chose de mobilisable avant la crise." },
+  { title: 'Relis le changement', body: "Note ce qui a vraiment bougé en toi pour ne pas laisser l'usure effacer le chemin parcouru." },
+];
+
+const resourceItems = [
+  { label: 'Maintenance', detail: 'Prochaska, Marlatt, Fogg, Davidson.' },
+  { label: "Réseau de soutien", detail: 'Une personne ou une structure mobilisable avant la crise.' },
+  { label: 'Ressources victimes', detail: 'Urgence et orientation.', href: '/violence/victimes/' },
+  { label: 'Module précédent', detail: "Relire l'autonomie.", href: '/formations/victimes/5-autonomie/' },
+];
+
+const warningItems = [
+  "Ne traite pas un moment difficile comme la preuve que rien n'a changé.",
+  "Ne construis pas des habitudes trop grandes pour tenir dans les mauvais jours.",
+  "Ne laisse pas l'isolement s'installer sans le nommer.",
+];
+---
+
+<FormationModulePrivateLayout
+  currentPath="/membres/formations/victimes/6-ancrage/"
+  title="Module V6 — Ancrage durable"
+  description="Version complète du dernier module victimes : maintenance, signaux d'alerte, habitudes ancrées, soutien à long terme et consolidation du changement."
+  heroTitle="Module V6 — Ancrage durable"
+  heroTagline="Ce module t'aide à faire tenir ce que tu as reconstruit dans le temps : reconnaître les glissements, garder des appuis, et traiter les moments difficiles comme des informations utiles."
+  moduleLabel="Version complète"
+  progressLabel="Parcours victimes · Module 6 sur 6"
+  backAction={{ text: 'Revenir à la page publique', link: '/formations/victimes/6-ancrage/', variant: 'secondary' }}
+  nextAction={{ text: 'Revenir au parcours victimes', link: '/formations/victimes/', variant: 'primary' }}
+  recapItems={recapItems}
+  checklistItems={checklistItems}
+  protocolItems={protocolItems}
+  resourceItems={resourceItems}
+  warningItems={warningItems}
+>
+  <p>
+    Tu arrives à la fin du parcours victimes. Ce module ne sert pas à rouvrir toutes les questions. Il sert à faire tenir ce que tu as déjà commencé à poser.
+  </p>
+  <h3>La maintenance est un travail vivant</h3>
+  <p>
+    Prochaska et Marlatt aident à comprendre qu'un parcours durable traverse des moments de glissement partiel. Le sujet n'est pas de ne plus jamais vaciller. Le sujet est de reconnaître tôt ce qui change et de savoir quoi activer avant que ça s'effondre.
+  </p>
+  <h3>Les signaux d'alerte personnels</h3>
+  <p>
+    Isolement, fatigue, cynisme, retour de la minimisation, abandon des habitudes de soin, dialogue intérieur plus dur : repère ce qui, chez toi, annonce un besoin d'attention supplémentaire.
+  </p>
+  <h3>Les ancrages très petits</h3>
+  <p>
+    Une petite habitude claire, ancrée à un signal ou à un moment précis, tient souvent mieux qu'un grand plan abstrait. C'est là que la maintenance devient réaliste.
+  </p>
+  <h3>Le soutien compte</h3>
+  <p>
+    Une personne honnête, un thérapeute, un groupe ou une structure peuvent faire une différence très concrète dans la durée. Il n'y a rien de noble à tout tenir seul(e).
+  </p>
+  <h3>L’exercice : tes signaux et tes ancrages</h3>
+  <p>
+    Note trois à cinq signaux d'alerte personnels. Pour chacun, associe une petite réponse simple : un message, une respiration, une reprise du carnet, une prise de contact, une soirée plus tôt, un retour à une habitude de base.
+  </p>
+  <h3>Ce que tu peux retenir de ce module</h3>
+  <p>
+    Si tu sais déjà un peu mieux ce qui glisse avant la crise et ce qui peut t'aider à revenir plus tôt vers l'équilibre, alors tu as gagné une vraie base pour la suite.
+  </p>
+</FormationModulePrivateLayout>

@@ -1,0 +1,39 @@
+---
+import {
+  entryHasCurrentPath,
+  groupHasCurrentPath,
+  isCurrentPath,
+  isNavLink,
+  type NavEntry,
+  type NavGroup,
+} from '../../lib/navigation';
+
+interface Props {
+  currentPath: string;
+  items: NavEntry[];
+}
+
+const { currentPath, items } = Astro.props;
+---
+
+<ul class="sidebar-tree">
+  {items.map((item) =>
+    isNavLink(item) ? (
+      <li>
+        <a class:list={['sidebar-tree__link', isCurrentPath(item.link, currentPath) && 'is-current']} href={item.link}>
+          {item.label}
+        </a>
+      </li>
+    ) : (
+      <li>
+        <details
+          class="sidebar-tree__group"
+          open={item.collapsed === false || groupHasCurrentPath(item as NavGroup, currentPath)}
+        >
+          <summary>{item.label}</summary>
+          <Astro.self currentPath={currentPath} items={item.items} />
+        </details>
+      </li>
+    ),
+  )}
+</ul>

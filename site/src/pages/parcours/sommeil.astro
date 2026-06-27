@@ -1,0 +1,72 @@
+---
+import ParcoursPage from '../../components/ParcoursPage.astro';
+---
+
+<ParcoursPage
+  currentPath="/parcours/sommeil"
+  title="Parcours : Améliorer Ton Sommeil"
+  description="Restaure un sommeil réparateur pour une vie plus énergique"
+  hero={{
+    title: '😴 Améliorer ton sommeil',
+    tagline: 'Restaure un sommeil réparateur pour une vie plus énergique',
+    actions: [{ text: 'Commencer le premier module', link: '/sommeil/', variant: 'primary' }],
+  }}
+  parcourId="sommeil"
+  modules={[
+    { title: 'Comprendre le sommeil', link: '/sommeil/' },
+    { title: 'Les cycles du sommeil', link: '/sommeil/cycles' },
+    { title: 'Hygiène du sommeil', link: '/sommeil/hygiene' },
+    { title: 'Dette de sommeil', link: '/sommeil/dette' },
+    { title: 'Nutrition et sommeil', link: '/systeme-digestif/nutrition/sommeil-nutriments' },
+    { title: 'Lumière et mélatonine', link: '/systeme-hormonal/melatonine' },
+  ]}
+  intro="Ce parcours te donne les clés pour comprendre ton sommeil, identifier ce qui le perturbe et retrouver des nuits vraiment réparatrices. Fini de te réveiller épuisé : on reconstruit tout, étape par étape."
+  steps={[
+    {
+      title: 'Étape 1 — Comprendre les cycles du sommeil',
+      body: "Le sommeil n'est pas uniforme. Chaque nuit, ton cerveau traverse des cycles de 90 minutes — sommeil léger, profond, paradoxal. Comprendre cette architecture, c'est arrêter de se battre contre sa biologie.",
+      links: [
+        { href: '/sommeil/', text: 'Tout comprendre sur le sommeil' },
+        { href: '/sommeil/cycles', text: 'Les cycles du sommeil expliqués' },
+        { href: '/sommeil/en-bref', text: 'Le sommeil en bref' },
+      ],
+    },
+    {
+      title: 'Étape 2 — Identifier tes freins',
+      body: "Stress, écrans, horaires décalés, caféine... Les ennemis du sommeil sont nombreux et souvent invisibles. Cette étape t'aide à faire le diagnostic de ce qui sabote tes nuits.",
+      links: [
+        { href: '/sommeil/', text: 'Le stress et le sommeil' },
+        { href: '/systeme-hormonal/', text: "L'impact du cortisol sur le sommeil" },
+      ],
+    },
+    {
+      title: "Étape 3 — L'hygiène du sommeil (les vraies règles)",
+      body: "L'hygiène du sommeil, ce n'est pas juste éviter les écrans. C'est un ensemble de pratiques cohérentes qui préparent ton cerveau et ton corps à basculer en mode récupération. On démonte les mythes, on garde ce qui marche.",
+      links: [{ href: '/sommeil/hygiene', text: "L'hygiène du sommeil : le guide complet" }],
+    },
+    {
+      title: 'Étape 4 — Gérer la dette de sommeil',
+      body: "Tu peux pas rattraper une semaine de mauvais sommeil avec une grasse matinée du dimanche. Mais tu peux apprendre à gérer intelligemment ta dette et à récupérer progressivement sans dérégler ton rythme circadien.",
+      links: [{ href: '/sommeil/dette', text: 'La dette de sommeil : comprendre et rembourser' }],
+    },
+    {
+      title: 'Étape 5 — Connecter sommeil, stress et hormones',
+      body: "Le sommeil n'est pas isolé. Il interagit profondément avec ton niveau de stress, tes hormones (mélatonine, cortisol, insuline) et ta nutrition. Cette étape boucle la boucle pour que tu voies le tableau complet.",
+      links: [
+        { href: '/systeme-hormonal/melatonine', text: 'La mélatonine et la lumière' },
+        { href: '/systeme-digestif/nutrition/sommeil-nutriments', text: 'La nutrition qui favorise le sommeil' },
+        { href: '/systeme-nerveux/nerf-vague', text: "Le nerf vague pour s'endormir plus vite" },
+      ],
+    },
+  ]}
+  resources={[
+    { href: '/sommeil/', text: 'Tout comprendre sur ton sommeil' },
+    { href: '/sommeil/cycles', text: 'Les cycles du sommeil en détail' },
+    { href: '/systeme-hormonal/melatonine', text: 'La mélatonine : hormone du sommeil' },
+    { href: '/stress/solutions-naturelles', text: 'Réduire le stress pour mieux dormir' },
+    { href: '/parcours/stress', text: 'La gestion du stress' },
+    { href: '/systeme-hormonal/', text: 'Le système hormonal' },
+    { href: '/activite/physique/bienfaits', text: "L'activité physique et le sommeil" },
+  ]}
+  closing="Une bonne nuit, ça se prépare le matin. Ce parcours t'apprend comment."
+/>
