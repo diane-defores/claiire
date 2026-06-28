@@ -10,10 +10,10 @@ Claiire (formerly TMV / Transforme Ma Vie) is a mobile wellness app with an on-d
 
 ## PRD & Specs
 
-- **PRD (source of truth):** `shipflow_data/technical/CLAUDE.md` and `shipflow_data/workflow/` trackers — full product requirements, features, architecture decisions
-- **Architecture:** `shipflow_data/technical/CLAUDE.md`
-- **Original specs:** `shipflow_data/technical/CLAUDE.md` (historical reference)
-- **Project brief:** `shipflow_data/business/` and `shipflow_data/technical/` (historical)
+- **PRD (source of truth):** `shipflow_data/technical/site/CLAUDE.md` and `shipflow_data/workflow/` trackers — full product requirements, features, architecture decisions
+- **Architecture:** `shipflow_data/technical/site/CLAUDE.md`
+- **Original specs:** `shipflow_data/technical/site/CLAUDE.md` (historical reference)
+- **Project brief:** `shipflow_data/business/site/`, `shipflow_data/editorial/site/`, and `shipflow_data/technical/site/`
 
 Always refer to the PRD for feature requirements, XP values, architecture decisions (AD-1 through AD-13), and implementation order.
 
@@ -50,5 +50,7 @@ Always refer to the PRD for feature requirements, XP values, architecture decisi
 
 ## Reference Docs
 
-- `shipflow_data/business/` — project brief and positioning history
-- `shipflow_data/technical/` — historical technical reference docs
+- `shipflow_data/branding/` — shared brand source of truth
+- `shipflow_data/business/site/` — site positioning and commercial strategy
+- `shipflow_data/editorial/site/` — site content doctrine and formation planning
+- `shipflow_data/technical/site/` — historical technical reference docs

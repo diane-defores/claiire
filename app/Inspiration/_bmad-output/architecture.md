@@ -3,8 +3,8 @@ stepsCompleted: [1, 2, 3, 4, 5, 6, 7, 8]
 status: 'complete'
 completedAt: '2026-03-07'
 inputDocuments:
-  - shipflow_data/technical/
-  - shipflow_data/business/
+  - shipflow_data/technical/app/ or shipflow_data/technical/site/
+  - shipflow_data/business/app/ or shipflow_data/business/site/
 workflowType: 'architecture'
 lastStep: 8
 project_name: 'tmv-app'

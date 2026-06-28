@@ -4,7 +4,7 @@
 > **Date:** 2026-03-14
 > **Status:** Draft
 > **Product Name:** Claiire (formerly TMV / Transforme Ma Vie)
-> **Sources:** `shipflow_data/business/`, `shipflow_data/technical/`
+> **Sources:** `shipflow_data/business/app/` or `shipflow_data/business/site/`, and `shipflow_data/technical/app/` or `shipflow_data/technical/site/`
 
 ---
 

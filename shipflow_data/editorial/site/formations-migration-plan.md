@@ -19,15 +19,15 @@ Le but est de **recomposer** chaque module dans un nouveau systeme :
 
 Toute la migration doit etre alignee sur :
 
-- [GUIDELINES.md](/home/claude/claiire/GUIDELINES.md)
-- [BILLING-STRATEGY.md](/home/claude/claiire/BILLING-STRATEGY.md)
+- [guidelines.md](/home/claude/claiire/shipflow_data/editorial/site/guidelines.md)
+- [billing-strategy.md](/home/claude/claiire/shipflow_data/business/site/billing-strategy.md)
 
 Regles transversales :
 
 - toutes les pages publiques et privees sont redigees en tutoiement
 - aucun melange `tu / vous`
 - le contenu doit rester clair, bienveillant, concis et actionnable
-- les formations violence doivent respecter la posture specifique definie dans `GUIDELINES.md`
+- les formations violence doivent respecter la posture specifique definie dans `shipflow_data/editorial/site/guidelines.md`
 
 Cette contrainte fait partie de la definition de termine pour chaque module.
 
@@ -140,7 +140,7 @@ Il doit etre **ameliore**.
 - une FAQ SEO
 - un maillage obligatoire sortant
 - une version privee avec execution concrete
-- une verification de coherence avec `GUIDELINES.md`
+- une verification de coherence avec `shipflow_data/editorial/site/guidelines.md`
 
 ---
 
@@ -153,7 +153,7 @@ Il faut migrer par lots logiques.
 
 ### Livrables
 
-- [x] template de reference produit : [FORMATIONS-PUBLIC-PRIVATE-TEMPLATE.md](/home/claude/claiire/FORMATIONS-PUBLIC-PRIVATE-TEMPLATE.md)
+- [x] template de reference produit : [formations-public-private-template.md](/home/claude/claiire/shipflow_data/editorial/site/formations-public-private-template.md)
 - [x] layout Astro public : [FormationModulePublicLayout.astro](/home/claude/claiire/src/layouts/FormationModulePublicLayout.astro)
 - [x] layout Astro prive : [FormationModulePrivateLayout.astro](/home/claude/claiire/src/layouts/FormationModulePrivateLayout.astro)
 
@@ -222,7 +222,7 @@ Pour chaque module :
 1. une page publique refondue
 2. une page privee premium
 3. un mapping clair de ce qui reste public vs prive
-4. une validation tonale contre `GUIDELINES.md`
+4. une validation tonale contre `shipflow_data/editorial/site/guidelines.md`
 
 ### Regle
 

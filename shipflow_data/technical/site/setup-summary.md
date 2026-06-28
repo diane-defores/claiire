@@ -163,7 +163,7 @@ If starting from scratch, follow this sequence:
    - Recommends next steps
 
 2. **Create Product Brief** (`*create-product-brief`)
-   - Or use the existing shipflow_data/business/ or shipflow_data/technical/ docs
+   - Or use the existing `shipflow_data/business/site/`, `shipflow_data/editorial/site/`, or `shipflow_data/technical/site/` docs
 
 3. **Design Architecture** (`*create-architecture`)
    - System design
@@ -202,11 +202,11 @@ This validates:
 
 ### For Understanding the Project
 1. `README.md` - Overview
-2. `shipflow_data/business/` - Complete specifications and positioning
-3. `shipflow_data/technical/` - Technical details
+2. `shipflow_data/business/site/` - Complete specifications and positioning
+3. `shipflow_data/technical/site/` - Technical details
 
 ### For Using BMAD
-1. `shipflow_data/technical/` - Getting started guide
+1. `shipflow_data/technical/site/` - Getting started guide
 2. `_bmad/bmm/workflows/workflow-status/instructions.md` - How workflows work
 3. Agent files in your IDE folder (`.cursor/`, `.github/`, etc.)
 

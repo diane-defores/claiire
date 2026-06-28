@@ -212,9 +212,11 @@ This project uses BMAD Method for development. To contribute:
 
 ## Resources
 
-- **Business docs**: `shipflow_data/business/`
-- **Technical docs**: `shipflow_data/technical/`
-- **Workflow trackers**: `shipflow_data/workflow/`
+- **Brand docs**: `shipflow_data/branding/`
+- **Business docs**: `shipflow_data/business/site/`
+- **Editorial docs**: `shipflow_data/editorial/site/`
+- **Technical docs**: `shipflow_data/technical/site/`
+- **Workflow trackers**: `shipflow_data/workflow/` and `shipflow_data/workflow/site/`
 - **BMAD Documentation**: `_bmad/` directory
 
 ## License

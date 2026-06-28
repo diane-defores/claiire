@@ -103,10 +103,10 @@
 ## Migration formations public / privé — 2026-03-16
 
 - [x] Définir le modèle cible `public SEO + privé premium`
-- [x] Créer le cadrage produit dans [FORMATIONS-PUBLIC-PRIVATE-TEMPLATE.md](/home/claude/claiire/FORMATIONS-PUBLIC-PRIVATE-TEMPLATE.md)
+- [x] Créer le cadrage produit dans [formations-public-private-template.md](/home/claude/claiire/shipflow_data/editorial/site/formations-public-private-template.md)
 - [x] Créer les layouts Astro [FormationModulePublicLayout.astro](/home/claude/claiire/src/layouts/FormationModulePublicLayout.astro) et [FormationModulePrivateLayout.astro](/home/claude/claiire/src/layouts/FormationModulePrivateLayout.astro)
-- [x] Rédiger le plan d'exécution dans [FORMATIONS-MIGRATION-PLAN.md](/home/claude/claiire/FORMATIONS-MIGRATION-PLAN.md)
-- [x] Poser [GUIDELINES.md](/home/claude/claiire/GUIDELINES.md) comme source de ton pour la migration formation
+- [x] Rédiger le plan d'exécution dans [formations-migration-plan.md](/home/claude/claiire/shipflow_data/editorial/site/formations-migration-plan.md)
+- [x] Poser [guidelines.md](/home/claude/claiire/shipflow_data/editorial/site/guidelines.md) comme source de ton pour la migration formation
 - [x] Rendre le tutoiement obligatoire sur toutes les pages publiques et privées de formation
 - [x] Définir la convention technique des pages membres `/membres/formations/...`
 - [x] Définir la stratégie `noindex, nofollow` des pages privées + exclusion sitemap
@@ -121,9 +121,9 @@
 - [x] Harmoniser les hubs formation sur la logique `public d'abord, version complète ensuite`
 - [x] Harmoniser la fermeture des `16` modules publics avec un CTA final explicite vers la page membre
 - [x] Nettoyer le vocabulaire placeholder dans les layouts formation pour stabiliser le système éditorial
-- [x] Documenter la stratégie billing / gating web + mobile dans [BILLING-STRATEGY.md](/home/claude/claiire/BILLING-STRATEGY.md)
+- [x] Documenter la stratégie billing / gating web + mobile dans [billing-strategy.md](/home/claude/claiire/shipflow_data/business/site/billing-strategy.md)
 - [x] Poser la décision produit cible : `RevenueCat` pour mobile, `Polar` pour le web, backend Claiire pour l'unification des droits
-- [x] Rédiger le plan d'implémentation du gating dans [GATING-IMPLEMENTATION-PLAN.md](/home/claude/claiire/GATING-IMPLEMENTATION-PLAN.md)
+- [x] Rédiger le plan d'implémentation du gating dans [gating-implementation-plan.md](/home/claude/claiire/shipflow_data/technical/site/gating-implementation-plan.md)
 - [x] Basculer Astro en mode `server` pour rendre possible l'auth, la protection des routes membres et les webhooks billing
 - [x] Poser le middleware de protection de `/membres/**` avec repli vers la page publique équivalente
 - [x] Poser les helpers de session membre et les routes socles `/connexion/` et `/compte/`

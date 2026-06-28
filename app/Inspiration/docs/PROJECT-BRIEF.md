@@ -310,8 +310,8 @@ AI Pipeline
 ## References
 
 - **Technical Specs**: `docs/Tmv specs.md`
-- **Stack Analysis**: `shipflow_data/technical/`
-- **Inspiration**: `shipflow_data/business/` (Jardin Mental app)
+- **Stack Analysis**: `shipflow_data/technical/app/` or `shipflow_data/technical/site/` depending on the target surface
+- **Inspiration**: `shipflow_data/business/app/` or `shipflow_data/business/site/` depending on the target surface
 - **BMAD Documentation**: `_bmad/` directory
 
 ## Next Steps for Agents
