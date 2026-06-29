@@ -1,9 +1,5 @@
 # TASKS.md
 
-🟠 [app] task: Patch critical/high npm audit | status: todo | area: dependencies
-🟡 [app] task: Align runtime/package-manager pins | status: todo | area: configuration
-🟡 [app] task: Add dependabot/renovate automation | status: todo | area: configuration
-🟡 [app] task: Update expo-secure-store version alignment | status: todo | area: dependencies
 🟢 [site] task: Unify package manager and lockfile for site installs and audits | status: done | area: dependencies | id: site-deps-package-manager
 🟠 [site] task: Validate esbuild override on the effective package manager and prove runtime mitigation | status: todo | area: security | id: site-deps-esbuild-mitigation
 🟢 [site] task: Align actual Node runtime with engines.node and pin packageManager | status: done | area: configuration | id: site-deps-runtime-pin

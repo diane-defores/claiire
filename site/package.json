@@ -2,8 +2,9 @@
   "name": "claiire",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@11.8.0",
   "engines": {
-    "node": ">=24.0.0"
+    "node": "24.x"
   },
   "scripts": {
     "dev": "astro dev",
@@ -42,12 +43,14 @@
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.9.3"
   },
-  "overrides": {
-    "path-to-regexp": "6.3.0",
-    "path-to-regexp-updated": "npm:path-to-regexp@6.3.0",
-    "yaml": "2.8.3",
-    "yaml-language-server>yaml": "2.8.3",
-    "esbuild": "0.28.1"
+  "pnpm": {
+    "overrides": {
+      "path-to-regexp": "6.3.0",
+      "path-to-regexp-updated": "npm:path-to-regexp@6.3.0",
+      "yaml": "2.8.3",
+      "yaml-language-server>yaml": "2.8.3",
+      "esbuild": "0.28.1"
+    }
   },
   "license": "UNLICENSED"
 }

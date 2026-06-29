@@ -7,6 +7,17 @@ module.exports = {
           delete pkg.dependencies['path-to-regexp'];
         }
       }
+
+      if (pkg.dependencies?.esbuild === '0.27.7') {
+        console.log(`[pnpmfile] Intercepted ${pkg.name}, forcing esbuild@0.28.1`);
+        pkg.dependencies.esbuild = '0.28.1';
+      }
+
+      if (pkg.optionalDependencies?.esbuild === '0.27.7') {
+        console.log(`[pnpmfile] Intercepted ${pkg.name}, forcing optional esbuild@0.28.1`);
+        pkg.optionalDependencies.esbuild = '0.28.1';
+      }
+
       return pkg;
     }
   }

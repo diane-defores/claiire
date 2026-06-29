@@ -11,6 +11,12 @@ module.exports = {
           pkg.dependencies['yaml'] = '2.8.3';
         }
       }
+      if (pkg.dependencies?.esbuild === '0.27.7') {
+        pkg.dependencies['esbuild'] = '0.28.1';
+      }
+      if (pkg.optionalDependencies?.esbuild === '0.27.7') {
+        pkg.optionalDependencies['esbuild'] = '0.28.1';
+      }
       return pkg;
     }
   }
